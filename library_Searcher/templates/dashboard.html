@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div id="panel-home" class="sub-panel" style="display: block;">
+    <section class="book-row-section">
+        <h2>Continue Reading</h2>
+        <div class="book-slider">
+            <div class="book-card progress-card">
+                <div class="book-cover cover-1"><span>Neuromancer</span></div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 0%;"></div>
+                    <span class="progress-text">Not started yet</span>
+                </div>
+            </div>
+            <div class="book-card progress-card">
+                <div class="book-cover cover-2"><span>Foundation</span></div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 0%;"></div>
+                    <span class="progress-text">Not started yet</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="book-row-section">
+        <h2>Recommended for You</h2>
+        <div class="book-slider">
+            <div class="book-card"><div class="book-cover cover-3"><span>Snow Crash</span></div></div>
+            <div class="book-card"><div class="book-cover cover-4"><span>The Martian</span></div></div>
+            <div class="book-card"><div class="book-cover cover-5"><span>Hyperion</span></div></div>
+        </div>
+    </section>
+</div>
+
+{% endblock %}
