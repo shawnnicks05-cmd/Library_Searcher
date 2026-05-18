@@ -93,6 +93,18 @@ def profile():
         current_user=session['username']
     )
 
+@app.route('/search')
+def search():
+
+    # Prevent access if not logged in
+    if 'username' not in session:
+        return redirect(url_for('index'))
+
+    return render_template(
+        'search.html',
+        current_user=session['username']
+    )
+
 
 @app.route('/logout')
 def logout():
@@ -102,7 +114,6 @@ def logout():
     flash('Logged out successfully!', 'info')
 
     return redirect(url_for('index'))
-
 
 if __name__ == '__main__':
     app.run(debug=True)
