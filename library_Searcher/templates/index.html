@@ -3,27 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Library Searcher Template</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-    <input type="radio" name="view-switch" id="switch-auth" checked>
-    <input type="radio" name="view-switch" id="switch-home">
+    <!-- 1. DYNAMIC VIEWS: Python controls which screen is active on page reload -->
+    <input type="radio" name="view-switch" id="switch-auth" {{ 'checked' if not login_success else '' }}>
+    <input type="radio" name="view-switch" id="switch-home" {{ 'checked' if login_success else '' }}>
     <input type="radio" name="view-switch" id="switch-profile">
     <input type="radio" name="view-switch" id="switch-settings">
 
+    <!-- AUTH SCREEN PANEL -->
     <div class="view-panel auth-screen">
         <div class="auth-wrapper">
             <h1 class="auth-logo">Library Searcher</h1>
             
+            <!-- Dynamic Flash Error Messages Display -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+              {% if messages %}
+                {% for category, message in messages %}
+                  <div class="alert alert-{{ category }} center-text" style="color: #ff4a4a; margin-bottom: 15px;">
+                      {{ message }}
+                  </div>
+                {% endfor %}
+              {% endif %}
+            {% endwith %}
+            
             <div class="auth-box-container">
                 <div class="auth-box">
                     <h2>Sign In</h2>
-                    <form action="{{ url_for('login') }}" method="post">
-                        <input name = "username" type="text" placeholder="Username" required>
-                        <input name = "password" type="password" placeholder="Password" required>
+                    <form action="{{ url_for('login') }}" method="POST">
+                        <input name="username" type="text" placeholder="Username" required>
+                        <input name="password" type="password" placeholder="Password" required>
                         <button type="submit" class="auth-btn center-text">Sign In</button>
                     </form>
                 </div>
@@ -31,8 +43,8 @@
         </div>
     </div>
 
+    <!-- MAIN APP WORKSPACE -->
     <div class="app-workspace">
-        
         <nav class="navbar">
             <div class="nav-left">
                 <label for="switch-home" class="home-btn">Library Searcher</label>
@@ -40,7 +52,6 @@
             <div class="nav-right">
                 <div class="search-container">
                     <input type="text" placeholder="Search books, genres..." class="search-input">
-                    
                     <div class="search-dropdown">
                         <div class="dropdown-section">
                             <h4>Suggested For You</h4>
@@ -55,12 +66,15 @@
                     </div>
                 </div>
                 <label for="switch-settings" class="nav-link">Settings</label>
-                <label for="switch-profile" class="nav-link profile-nav-btn">Profile</label>
+                <!-- Dynamic Nav Avatar Initials -->
+                <label for="switch-profile" class="nav-link profile-nav-btn">
+                    {{ current_user[0].upper() if login_success else 'Profile' }}
+                </label>
             </div>
         </nav>
 
         <div class="view-container">
-            
+            <!-- HOME VIEW PANEL -->
             <div id="panel-home" class="sub-panel">
                 <section class="book-row-section">
                     <h2>Continue Reading</h2>
@@ -92,22 +106,31 @@
                 </section>
             </div>
 
+            <!-- PROFILE VIEW PANEL -->
             <div id="panel-profile" class="sub-panel">
                 <div class="panel-container">
                     <div class="profile-header">
-                        <div class="profile-avatar-large">?</div>
-                        <h1>Guest User</h1>
-                        <p class="profile-badge">Account Pending Setup</p>
+                        <!-- Dynamic First Letter Avatar -->
+                        <div class="profile-avatar-large">
+                            {{ current_user[0].upper() if login_success else '?' }}
+                        </div>
+                        <!-- Dynamic Username Injection -->
+                        <h1>{{ current_user if login_success else 'Guest User' }}</h1>
+                        <p class="profile-badge">
+                            {{ 'Verified Student' if login_success else 'Account Pending Setup' }}
+                        </p>
                     </div>
                     <div class="profile-stats">
                         <div class="stat-box"><h3>0</h3><p>Books Read</p></div>
                         <div class="stat-box"><h3>0</h3><p>Pages Flipped</p></div>
                         <div class="stat-box"><h3>0 Days</h3><p>Current Streak</p></div>
                     </div>
-                    <label for="switch-auth" class="logout-btn center-text">Log Out / Exit</label>
+                    <!-- Logging out sends user back to clean home route -->
+                    <a href="/" class="logout-btn center-text" style="text-decoration: none; display: block;">Log Out / Exit</a>
                 </div>
             </div>
 
+            <!-- SETTINGS VIEW PANEL -->
             <div id="panel-settings" class="sub-panel">
                 <div class="panel-container">
                     <h1>Account Settings</h1>
@@ -126,7 +149,5 @@
             </div>
         </div>
     </div>
-    <title>Document</title>
-    <link rel="stylesheet" href="example.css">
 </body>
 </html>
