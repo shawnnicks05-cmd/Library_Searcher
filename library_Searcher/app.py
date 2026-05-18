@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request ,redirect, url_for , flash
+from flask import Flask, render_template, request, redirect, url_for, flash, session
 
 app = Flask(__name__)
 app.secret_key = "Library_Secret_Key"
@@ -7,54 +7,102 @@ USERS_DB = {
     "admin": "password123"
 }
 
+
 @app.route('/')
 def index():
-    return render_template('login.html',login_success=False)
+
+    # If already logged in
+    if 'username' in session:
+        return redirect(url_for('dashboard'))
+
+    return render_template(
+        'login.html',
+        login_success=False
+    )
+
 
 @app.route('/login', methods=['POST'])
 def login():
-    username = request.form['username']
-    password = request.form['password']
-    
+
+    username = request.form.get('username', '').strip()
+    password = request.form.get('password', '').strip()
+
+    # Validation
     if not username:
-        return render_template('login.html', login_success=False, username_err="Username is required.")
+        return render_template(
+            'login.html',
+            login_success=False,
+            username_err="Username is required."
+        )
+
     if not password:
-        return render_template('login.html', login_success=False, username=username, password_err="Password is required.")
-    
+        return render_template(
+            'login.html',
+            login_success=False,
+            username=username,
+            password_err="Password is required."
+        )
+
+    # Username check
     if username not in USERS_DB:
-        return render_template('login.html', login_success=False, username_err="Username not found.")
+        return render_template(
+            'login.html',
+            login_success=False,
+            username_err="Username not found."
+        )
+
+    # Password check
     if USERS_DB[username] != password:
-        return render_template('login.html', login_success=False, username=username, password_err="Incorrect password.")
+        return render_template(
+            'login.html',
+            login_success=False,
+            username=username,
+            password_err="Incorrect password."
+        )
 
+    # Save login session
+    session['username'] = username
 
-    if username in USERS_DB and USERS_DB[username] == password:
-        flash('Login successful!', 'success')
-        return render_template('dashboard.html', login_success=True , user=username,password=password , )
+    flash('Login successful!', 'success')
 
-    return render_template('login.html', login_success=True, current_user=username)
+    return redirect(url_for('dashboard'))
+
 
 @app.route('/dashboard')
 def dashboard():
-    username = request.args.get('username', 'Guest')
-    return render_template('dashboard.html', current_user=username)
+
+    # Prevent access if not logged in
+    if 'username' not in session:
+        return redirect(url_for('index'))
+
+    return render_template(
+        'dashboard.html',
+        current_user=session['username']
+    )
+
 
 @app.route('/profile')
 def profile():
-    return render_template('profile.html')
-"""
-@app.route('/register', methods=['POST'])
-def register():
-    username = request.form['username']
-    password = request.form['password']
 
-    if username in USERS_DB:
-        flash('Username already exists.', 'danger')
-        return render_template('index.html', login_success=False)
-    
-    USERS_DB[username] = password
+    # Prevent access if not logged in
+    if 'username' not in session:
+        return redirect(url_for('index'))
 
-    return render_template('index.html', login_success=True, user=username)
-"""
+    return render_template(
+        'profile.html',
+        current_user=session['username']
+    )
+
+
+@app.route('/logout')
+def logout():
+
+    session.pop('username', None)
+
+    flash('Logged out successfully!', 'info')
+
+    return redirect(url_for('index'))
+
+
 if __name__ == '__main__':
     app.run(debug=True)
-
