@@ -4,7 +4,10 @@ app = Flask(__name__)
 app.secret_key = "Library_Secret_Key"
 
 USERS_DB = {
-    "admin": "password123"
+    "admin": "password123",
+    "DwightRamos": "ginger",
+    "EthanMathhew": "Piang",
+    "Shawnnicks05": "Bading"
 }
 
 
@@ -70,14 +73,15 @@ def login():
 
 @app.route('/dashboard')
 def dashboard():
-
+    
     # Prevent access if not logged in
     if 'username' not in session:
         return redirect(url_for('index'))
 
     return render_template(
         'dashboard.html',
-        current_user=session['username']
+        current_user=session['username'],
+        username=session.get("username")
     )
 
 
@@ -85,6 +89,8 @@ def dashboard():
 def profile():
 
     # Prevent access if not logged in
+    
+
     if 'username' not in session:
         return redirect(url_for('index'))
 
