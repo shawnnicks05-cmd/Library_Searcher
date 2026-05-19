@@ -29,7 +29,8 @@
                         
                         <!-- PASSWORD FIELD -->
                         <div class="input-group" style="margin-top: 15px;">
-                            <input name="password" type="password" placeholder="Password" required>
+                            
+                            <input name="password" type="password" placeholder="Password" required autocomplete="off">
                             {% if password_err %}
                                 <span class="field-error-msg" style="color: #ff4a4a; font-size: 12px; display: block; margin-top: 5px;">
                                     {{ password_err }}
