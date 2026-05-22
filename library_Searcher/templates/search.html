@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+<div id="panel-profile" class="sub-panel" style="display: block;">
+    <div class="panel-container">
+        <div class="profile-header">
+            <div class="profile-avatar-large">
+                {{ current_user[0].upper() if current_user else '?' }}
+            </div>
+            <h1>{{ current_user if current_user else 'Guest User' }}</h1>
+            <p class="profile-badge">Account Verified</p>
+        </div>
+        <div class="profile-stats">
+            <div class="stat-box"><h3>0</h3><p>Books Read</p></div>
+            <div class="stat-box"><h3>0</h3><p>Pages Flipped</p></div>
+            <div class="stat-box"><h3>0 Days</h3><p>Current Streak</p></div>
+        </div>
+        <!-- Route action links back to a clean landing point -->
+        <a href="{{ url_for('logout') }}" class="logout-btn center-text" style="text-decoration: none; display: block;">Log Out / Exit</a>
+    </div>
+</div>
+
+
+{% endblock %}
