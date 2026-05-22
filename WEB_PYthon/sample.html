@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Searcher Template</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <input type="radio" name="view-switch" id="switch-auth" checked>
+    <input type="radio" name="view-switch" id="switch-home">
+    <input type="radio" name="view-switch" id="switch-profile">
+    <input type="radio" name="view-switch" id="switch-settings">
+
+    <div class="view-panel auth-screen">
+        <div class="auth-wrapper">
+            <h1 class="auth-logo">Library Searcher</h1>
+            
+            <div class="auth-box-container">
+                <div class="auth-box">
+                    <h2>Create Account</h2>
+                    <form>
+                        <input type="text" placeholder="Choose Username" required>
+                        <input type="password" placeholder="Create Password" required>
+                        <label for="switch-home" class="auth-btn btn-red center-text">Register & Enter</label>
+                    </form>
+                </div>
+
+                <div class="auth-box">
+                    <h2>Sign In</h2>
+                    <form>
+                        <input type="text" placeholder="Username" required>
+                        <input type="password" placeholder="Password" required>
+                        <label for="switch-home" class="auth-btn center-text">Sign In</label>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="app-workspace">
+        
+        <nav class="navbar">
+            <div class="nav-left">
+                <label for="switch-home" class="home-btn">Library Searcher</label>
+            </div>
+            <div class="nav-right">
+                <div class="search-container">
+                    <input type="text" placeholder="Search books, genres..." class="search-input">
+                    
+                    <div class="search-dropdown">
+                        <div class="dropdown-section">
+                            <h4>Suggested For You</h4>
+                            <div class="genre-tags"><span class="tag">Trending Books</span></div>
+                        </div>
+                        <div class="dropdown-section">
+                            <h4>Recent Searches</h4>
+                            <ul class="recent-list">
+                                <li class="empty-text">No recent searches</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <label for="switch-settings" class="nav-link">Settings</label>
+                <label for="switch-profile" class="nav-link profile-nav-btn">Profile</label>
+            </div>
+        </nav>
+
+        <div class="view-container">
+            
+            <div id="panel-home" class="sub-panel">
+                <section class="book-row-section">
+                    <h2>Continue Reading</h2>
+                    <div class="book-slider">
+                        <div class="book-card progress-card">
+                            <div class="book-cover cover-1"><span>Neuromancer</span></div>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 0%;"></div>
+                                <span class="progress-text">Not started yet</span>
+                            </div>
+                        </div>
+                        <div class="book-card progress-card">
+                            <div class="book-cover cover-2"><span>Foundation</span></div>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 0%;"></div>
+                                <span class="progress-text">Not started yet</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="book-row-section">
+                    <h2>Recommended for You</h2>
+                    <div class="book-slider">
+                        <div class="book-card"><div class="book-cover cover-3"><span>Snow Crash</span></div></div>
+                        <div class="book-card"><div class="book-cover cover-4"><span>The Martian</span></div></div>
+                        <div class="book-card"><div class="book-cover cover-5"><span>Hyperion</span></div></div>
+                    </div>
+                </section>
+            </div>
+
+            <div id="panel-profile" class="sub-panel">
+                <div class="panel-container">
+                    <div class="profile-header">
+                        <div class="profile-avatar-large">?</div>
+                        <h1>Guest User</h1>
+                        <p class="profile-badge">Account Pending Setup</p>
+                    </div>
+                    <div class="profile-stats">
+                        <div class="stat-box"><h3>0</h3><p>Books Read</p></div>
+                        <div class="stat-box"><h3>0</h3><p>Pages Flipped</p></div>
+                        <div class="stat-box"><h3>0 Days</h3><p>Current Streak</p></div>
+                    </div>
+                    <label for="switch-auth" class="logout-btn center-text">Log Out / Exit</label>
+                </div>
+            </div>
+
+            <div id="panel-settings" class="sub-panel">
+                <div class="panel-container">
+                    <h1>Account Settings</h1>
+                    <div class="settings-group">
+                        <h3>Reading Parameters</h3>
+                        <label class="setting-item">
+                            <span>Cinematic Dark Theme (Always On)</span>
+                            <input type="checkbox" checked disabled>
+                        </label>
+                        <label class="setting-item">
+                            <span>Pre-render media covers</span>
+                            <input type="checkbox" checked>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
