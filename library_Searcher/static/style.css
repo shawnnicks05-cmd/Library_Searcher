@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Georgia', Garamond, 'Times New Roman', serif; /* Changed to an elegant serif font for a literary feel */
 }
 
 body, html {
-    background-color: #141414;
-    color: #e5e5e5;
+    background-color: #1a2421; /* Main application background (Deep Oxford/Library Green) */
+    color: #f2ebd9;            /* Default text color (Warm aged parchment) */
     width: 100vw;
     height: 100vh;
     overflow: hidden; 
@@ -63,9 +63,10 @@ input[type="radio"][name="view-switch"] {
 
 .auth-logo {
     font-size: 3.5rem;
-    color: #e50914;
+    color: #dfb15b; /* Login/Register page logo color (Muted antique brass) */
     font-weight: bold;
     margin-bottom: 30px;
+    letter-spacing: 1px;
 }
 
 .auth-box-container {
@@ -76,28 +77,28 @@ input[type="radio"][name="view-switch"] {
 }
 
 .auth-box {
-    background: #000;
-    border: 1px solid #222;
+    background: #23160a; /* Login/Register box background (Rich dark mahogany wood) */
+    border: 1px solid #422d1b; /* Login/Register box border (Polished walnut wood) */
     padding: 30px;
     flex: 1;
     min-width: 280px;
-    border-radius: 8px;
+    border-radius: 4px; /* Sharper corners for a traditional book/furniture aesthetic */
     text-align: left;
 }
 
 .auth-box h2 {
     font-size: 1.4rem;
     margin-bottom: 20px;
-    color: #fff;
+    color: #f2ebd9;
 }
 
 .auth-box input {
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
-    background: #333;
-    border: none;
-    color: white;
+    background: #2e261f; /* Login/Register input fields (Warm dark leather) */
+    border: 1px solid #544333;
+    color: #f2ebd9;
     border-radius: 4px;
     font-size: 0.9rem;
     outline: none;
@@ -106,7 +107,7 @@ input[type="radio"][name="view-switch"] {
 .auth-btn {
     width: 100%;
     padding: 12px;
-    background: #333;
+    background: #3c4f43; 
     border: none;
     color: white;
     font-weight: bold;
@@ -116,18 +117,20 @@ input[type="radio"][name="view-switch"] {
 }
 
 .btn-red {
-    background: #e50914;
+    background: #842d1b; /* Primary action button color (Deep crimson bookcloth) */
+    border: 1px solid #a33f2b;
 }
 
 .btn-red:hover {
-    background: #b80710;
+    background: #611e11; /* Primary action button hover color (Dark burgundy) */
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: rgba(18, 26, 23, 0.96); /* Navigation bar background (Very dark library green) */
+    border-bottom: 1px solid #2d3b36;
     padding: 15px 4%;
     position: fixed;
     top: 0;
@@ -137,7 +140,7 @@ input[type="radio"][name="view-switch"] {
 }
 
 .nav-left .home-btn {
-    color: #e50914;
+    color: #dfb15b; /* Navigation branding text color (Antique gold) */
     font-size: 1.6rem;
     font-weight: bold;
     cursor: pointer;
@@ -149,7 +152,7 @@ input[type="radio"][name="view-switch"] {
 }
 
 .nav-link {
-    color: #e5e5e5;
+    color: #d2c8b1;
     font-size: 0.9rem;
     margin-left: 20px;
     font-weight: 500;
@@ -157,7 +160,7 @@ input[type="radio"][name="view-switch"] {
 }
 
 .nav-link:hover {
-    color: #b3b3b3;
+    color: #dfb15b; 
 }
 
 .profile-nav-btn {
@@ -173,9 +176,9 @@ input[type="radio"][name="view-switch"] {
 
 /* SEARCH INPUT */
 .search-input {
-    background-color: #000;
-    border: 1px solid #333;
-    color: white;
+    background-color: #121a17; 
+    border: 1px solid #2d3b36;
+    color: #f2ebd9;
     padding: 8px 14px;
     font-size: 0.85rem;
     outline: none;
@@ -189,17 +192,26 @@ input[type="radio"][name="view-switch"] {
     position: absolute;
     top: 110%;
     right: 0;
+<<<<<<< HEAD:WEB_PYthon/style.css
+    background-color: #1c2723; /* Dropdown panel background (Cozy study green) */
+    border: 1px solid #354640;
+=======
 
     background-color: #181818;
     border: 1px solid #333;
 
+>>>>>>> origin/main:library_Searcher/static/style.css
     width: 260px;
-    border-radius: 6px;
+    border-radius: 4px;
     padding: 15px;
+<<<<<<< HEAD:WEB_PYthon/style.css
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+=======
 
     box-shadow: 0 8px 16px rgba(0,0,0,0.5);
 
     z-index: 1000;
+>>>>>>> origin/main:library_Searcher/static/style.css
 }
 
 .search-container:focus-within .search-dropdown {
@@ -207,11 +219,11 @@ input[type="radio"][name="view-switch"] {
 }
 
 .dropdown-section { margin-bottom: 12px; }
-.dropdown-section h4 { color: #666; font-size: 0.75rem; text-transform: uppercase; margin-bottom: 6px; }
-.genre-tags .tag { background: #e50914; color: #fff; padding: 4px 8px; font-size: 0.75rem; border-radius: 4px; display: inline-block; font-weight: bold; }
-.recent-list { list-style: none; font-size: 0.85rem; color: #aaa; }
+.dropdown-section h4 { color: #808f85; font-size: 0.75rem; text-transform: uppercase; margin-bottom: 6px; }
+.genre-tags .tag { background: #842d1b; color: #fff; padding: 4px 8px; font-size: 0.75rem; border-radius: 4px; display: inline-block; font-weight: bold; }
+.recent-list { list-style: none; font-size: 0.85rem; color: #c0b59f; }
 .recent-list li { margin-top: 4px; }
-.empty-text { font-style: italic; color: #555; }
+.empty-text { font-style: italic; color: #526359; }
 
 .view-container {
     padding-top: 90px;
@@ -235,7 +247,8 @@ input[type="radio"][name="view-switch"] {
 .book-row-section h2 {
     font-size: 1.4rem;
     margin-bottom: 15px;
-    color: #fff;
+    color: #f2ebd9;
+    font-family: 'Georgia', serif;
 }
 
 .book-slider {
@@ -270,26 +283,28 @@ input[type="radio"][name="view-switch"] {
     font-weight: bold;
     font-size: 0.9rem;
     box-shadow: inset 0 -60px 40px rgba(0,0,0,0.8);
+    border-left: 3px solid rgba(255,255,255,0.1); /* Adds a subtle visual "spine" highlight to book covers */
 }
 
-.cover-1 { background: linear-gradient(45deg, #1e3a8a, #3b82f6); }
-.cover-2 { background: linear-gradient(45deg, #581c87, #a855f7); }
-.cover-3 { background: linear-gradient(45deg, #065f46, #10b981); }
-.cover-4 { background: linear-gradient(45deg, #7c2d12, #f97316); }
-.cover-5 { background: linear-gradient(45deg, #831843, #ec4899); }
+/* Book Cover Gradients (Classic library leather, cloth, and paper spine colors) */
+.cover-1 { background: linear-gradient(45deg, #1f2d24, #3b5243); } /* Hunter Green */
+.cover-2 { background: linear-gradient(45deg, #421e15, #733c31); } /* Vintage Burgundy */
+.cover-3 { background: linear-gradient(45deg, #302112, #5c432d); } /* Antique Leather */
+.cover-4 { background: linear-gradient(45deg, #112233, #224466); } /* Dark Navy Library Cloth */
+.cover-5 { background: linear-gradient(45deg, #473c28, #7a6b4d); } /* Dusty Ochre/Cloth binding */
 
 .progress-card { height: 260px; }
 .progress-card .book-cover { height: 220px; }
-.progress-bar { height: 4px; background-color: #333; border-radius: 2px; }
-.progress-text { font-size: 0.75rem; color: #666; display: block; margin-top: 4px; }
+.progress-bar { height: 4px; background-color: #2a3832; border-radius: 2px; }
+.progress-text { font-size: 0.75rem; color: #9da8a3; display: block; margin-top: 4px; }
 
 .panel-container {
     max-width: 600px;
     margin: 30px auto 0 auto;
-    background: #181818;
+    background: #23160a; /* Settings & Profile wrapper container background (Rich dark mahogany wood) */
     padding: 40px;
-    border-radius: 8px;
-    border: 1px solid #282828;
+    border-radius: 4px;
+    border: 1px solid #422d1b;
 }
 
 .profile-header {
@@ -301,18 +316,19 @@ input[type="radio"][name="view-switch"] {
     width: 100px;
     height: 100px;
     border-radius: 4px;
-    background-color: #333;
+    background-color: #2e261f;
+    border: 1px solid #544333;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     font-size: 3rem;
-    color: #666;
+    color: #dfb15b;
     margin-bottom: 15px;
     font-weight: bold;
 }
 
 .profile-badge {
-    color: #666;
+    color: #dfb15b; 
     font-weight: bold;
     font-size: 0.9rem;
     margin-top: 5px;
@@ -325,33 +341,40 @@ input[type="radio"][name="view-switch"] {
 }
 
 .stat-box {
-    background: #222;
+    background: #1a2421; /* Individual dashboard metric box background (Deep green contrast) */
     padding: 15px;
     flex: 1;
     margin: 0 5px;
     text-align: center;
     border-radius: 4px;
+    border: 1px solid #2d3b36;
 }
 
 .stat-box h3 { color: #fff; font-size: 1.5rem; }
-.stat-box p { color: #aaa; font-size: 0.8rem; margin-top: 5px; }
+.stat-box p { color: #b1baa9; font-size: 0.8rem; margin-top: 5px; }
 
 .logout-btn {
     width: 100%;
     padding: 12px;
     background: transparent;
-    border: 1px solid #444;
-    color: #fff;
+    border: 1px solid #544333;
+    color: #c0b59f;
     font-size: 1rem;
     border-radius: 4px;
     cursor: pointer;
 }
 
 .logout-btn:hover {
-    background: #222;
+    background: #1a2421;
+    border-color: #dfb15b;
+    color: #fff;
 }
 
 .settings-group { margin-top: 25px; }
+<<<<<<< HEAD:WEB_PYthon/style.css
+.settings-group h3 { border-bottom: 1px solid #422d1b; padding-bottom: 8px; margin-bottom: 15px; font-size: 1.1rem; color: #dfb15b; }
+.setting-item { display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 0.95rem; color: #c0b59f; }
+=======
 .settings-group h3 { border-bottom: 1px solid #333; padding-bottom: 8px; margin-bottom: 15px; font-size: 1.1rem; }
 .setting-item { display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 0.95rem; color: #ccc; }
 
@@ -378,3 +401,4 @@ input[type="radio"][name="view-switch"] {
     font-size: 0.95rem;
     font-weight: 500;
 }
+>>>>>>> origin/main:library_Searcher/static/style.css
