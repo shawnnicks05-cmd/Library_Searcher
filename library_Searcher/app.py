@@ -12,11 +12,11 @@ USERS_DB = {
     "Shawnnicks05": "Bading"
 }
 
+
 BOOKS_DIR = os.path.join(app.root_path, 'static', 'Book_Covers')
 
 def get_Books():
     catalog = {}
-    print(f"DEBUG: Python is searching for your book covers here: {BOOKS_DIR}")
     if not os.path.exists(BOOKS_DIR):
         return catalog
 
