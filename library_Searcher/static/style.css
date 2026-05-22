@@ -6,8 +6,8 @@
 }
 
 body, html {
-    background-color: #1a2421; /* Main application background (Deep Oxford/Library Green) */
-    color: #f2ebd9;            /* Default text color (Warm aged parchment) */
+    background-color: #705336;
+    color: #6f4518;
     width: 100vw;
     height: 100vh;
     overflow: hidden; 
@@ -77,8 +77,8 @@ input[type="radio"][name="view-switch"] {
 }
 
 .auth-box {
-    background: #23160a; /* Login/Register box background (Rich dark mahogany wood) */
-    border: 1px solid #422d1b; /* Login/Register box border (Polished walnut wood) */
+    background: #f3d5b5;
+    border-color: #bc8a5f;      
     padding: 30px;
     flex: 1;
     min-width: 280px;
@@ -96,9 +96,10 @@ input[type="radio"][name="view-switch"] {
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
-    background: #2e261f; /* Login/Register input fields (Warm dark leather) */
-    border: 1px solid #544333;
-    color: #f2ebd9;
+    background: #ffedd8;
+    border: 1px solid #cf8e7e;
+    border-color: #bc8a5f;
+    color: #6f4518;
     border-radius: 4px;
     font-size: 0.9rem;
     outline: none;
@@ -117,19 +118,20 @@ input[type="radio"][name="view-switch"] {
 }
 
 .btn-red {
-    background: #842d1b; /* Primary action button color (Deep crimson bookcloth) */
+    background: #583101;
+    border-color: #6f4518;
     border: 1px solid #a33f2b;
 }
 
 .btn-red:hover {
-    background: #611e11; /* Primary action button hover color (Dark burgundy) */
+    background: #603808; /* Primary action button hover color (Dark burgundy) */
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(18, 26, 23, 0.96); /* Navigation bar background (Very dark library green) */
+    background-color: rgba(101, 65, 34, 0.96);
     border-bottom: 1px solid #2d3b36;
     padding: 15px 4%;
     position: fixed;
@@ -139,18 +141,32 @@ input[type="radio"][name="view-switch"] {
     z-index: 1000;
 }
 
-.nav-left .home-btn {
-    color: #dfb15b; /* Navigation branding text color (Antique gold) */
-    font-size: 1.6rem;
-    font-weight: bold;
-    cursor: pointer;
-}
+
 
 .nav-right {
     display: flex;
     align-items: center;
-}
+    gap: 20px;
+    
+  }
 
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;  /* space between circle btn and text */
+  }
+
+  .home-btn {
+    color: #dfb15b;
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .home-btn:hover {
+    color: #f2c97e;
+  }
 .nav-link {
     color: #d2c8b1;
     font-size: 0.9rem;
@@ -176,7 +192,7 @@ input[type="radio"][name="view-switch"] {
 
 /* SEARCH INPUT */
 .search-input {
-    background-color: #121a17; 
+    background-color: #48351e; 
     border: 1px solid #2d3b36;
     color: #f2ebd9;
     padding: 8px 14px;
@@ -188,6 +204,8 @@ input[type="radio"][name="view-switch"] {
 
 /* SEARCH DROPDOWN */
 .search-dropdown {
+    background-color: #f3d5b5;
+    border-color: #bc8a5f;
     display: none;
     position: absolute;
     top: 110%;
@@ -301,7 +319,7 @@ input[type="radio"][name="view-switch"] {
 .panel-container {
     max-width: 600px;
     margin: 30px auto 0 auto;
-    background: #23160a; /* Settings & Profile wrapper container background (Rich dark mahogany wood) */
+    background: #3b2816; /* Settings & Profile wrapper container background (Rich dark mahogany wood) */
     padding: 40px;
     border-radius: 4px;
     border: 1px solid #422d1b;
@@ -316,7 +334,7 @@ input[type="radio"][name="view-switch"] {
     width: 100px;
     height: 100px;
     border-radius: 4px;
-    background-color: #2e261f;
+    background-color: #534030;
     border: 1px solid #544333;
     display: inline-flex;
     justify-content: center;
@@ -341,13 +359,14 @@ input[type="radio"][name="view-switch"] {
 }
 
 .stat-box {
-    background: #1a2421; /* Individual dashboard metric box background (Deep green contrast) */
+    background: #65503b;
+    border-color: #bc8a5f;
     padding: 15px;
     flex: 1;
     margin: 0 5px;
     text-align: center;
     border-radius: 4px;
-    border: 1px solid #2d3b36;
+    border: 1px solid #d1897b;
 }
 
 .stat-box h3 { color: #fff; font-size: 1.5rem; }
@@ -366,10 +385,48 @@ input[type="radio"][name="view-switch"] {
 
 .logout-btn:hover {
     background: #1a2421;
-    border-color: #dfb15b;
+    border-color: #7a5c42;
     color: #fff;
 }
 
+/*
+home button
+*/
+
+/* The wrapper div */
+.home-icon {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* The anchor tag inside it */
+  .home-icon a {
+    text-decoration: none;
+  }
+  
+  /*circle nga button tapad sa title*/
+  .circle-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #504425;
+    border: 1px solid #403118;
+    font-size: 1.2rem;
+    color: white; /* add this */
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+  
+  .circle-btn:hover {
+    background-color: #4e6b57;
+    transform: scale(1.1);
+  }
+
+}
 .settings-group { margin-top: 25px; }
 <<<<<<< HEAD:WEB_PYthon/style.css
 .settings-group h3 { border-bottom: 1px solid #422d1b; padding-bottom: 8px; margin-bottom: 15px; font-size: 1.1rem; color: #dfb15b; }
