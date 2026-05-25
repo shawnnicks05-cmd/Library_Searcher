@@ -1,318 +1,171 @@
-from flask import Flask, render_template, request, redirect, url_for, flash, session
+from flask import Flask, render_template, request, redirect, url_for, flash, session,jsonify
+from recommender import get_Books, track_activity, get_user_scores, get_recommended_catalog,get_flat_recommendations
+from functools import wraps
+import json
 import os
-
 
 app = Flask(__name__)
 app.secret_key = "Library_Secret_Key"
 
-USERS_DB = {
-    "admin": "admin",
-    "DwightRamos": "ginger",
-    "EthanMathhew": "Piang",
-    "Shawnnicks05": "Bading"
-}
+def login_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
 
-BOOKS_DIR = os.path.join(app.root_path, 'static', 'Book_Covers')
+        if 'username' not in session:
+            flash("Please log in to access this page.","error")
+            return redirect(url_for('index'))
+        return f(*args,**kwargs)
+    return decorated_function
 
-def get_Books():
-    catalog = {}
-    print(f"DEBUG: Python is searching for your book covers here: {BOOKS_DIR}")
-    if not os.path.exists(BOOKS_DIR):
-        return catalog
+def load_users() -> dict:
+    with open("data/users.json", "r") as f:
+        return json.load(f)
 
-    for category in os.listdir(BOOKS_DIR):
-        category_path = os.path.join(BOOKS_DIR, category)
-        
-        if(os.path.isdir(category_path)):
-            catalog[category] = []
-
-            for filename in os.listdir(category_path):
-                if filename.lower().endswith(('.png')):
-
-                            
-                    book_title = os.path.splitext(filename)[0].title()
-                    catalog[category].append({
-                        'title': book_title,
-                        'category': category,
-                        'cover_image': filename
-                    })
-
-    return catalog
 
 @app.route('/')
 def index():
-
-    # If already logged in
     if 'username' in session:
         return redirect(url_for('dashboard'))
-
-    return render_template(
-        'login.html',
-        login_success=False
-    )
+    return render_template('login.html')
 
 
 @app.route('/login', methods=['POST'])
 def login():
-
     username = request.form.get('username', '').strip()
     password = request.form.get('password', '').strip()
 
-    # Validation
     if not username:
-        return render_template(
-            'login.html',
-            login_success=False,
-            username_err="Username is required."
-        )
+        return render_template('login.html', username_err="Username is required.")
 
     if not password:
-        return render_template(
-            'login.html',
-            login_success=False,
-            username=username,
-            password_err="Password is required."
-        )
+        return render_template('login.html', username=username, password_err="Password is required.")
 
-    # Username check
-    if username not in USERS_DB:
-        return render_template(
-            'login.html',
-            login_success=False,
-            username_err="Username not found."
-        )
+    users = load_users()
 
-    # Password check
-    if USERS_DB[username] != password:
-        return render_template(
-            'login.html',
-            login_success=False,
-            username=username,
-            password_err="Incorrect password."
-        )
+    if username not in users:
+        return render_template('login.html', username_err="Username not found.")
 
-    # Save login session
+    if users[username] != password:
+        return render_template('login.html', username=username, password_err="Incorrect password.")
+
     session['username'] = username
-
     flash('Login successful!', 'success')
-
     return redirect(url_for('dashboard'))
 
 
 @app.route('/dashboard')
 def dashboard():
+    if 'username' not in session:
+        return redirect(url_for('index'))
+
+    user    = session.get('username')
+    recommendations = get_flat_recommendations(user)
+    catalog_books = get_Books()
+    if not recommendations:
+        fallback_books = []
+        category_seen = set()
+        for book in catalog_books:
+            category = book.get('category')
+            if category not in  category_seen:
+             fallback_books.append(book)
+             category_seen.add(category)
     
-    # Prevent access if not logged in
-    if 'username' not in session:
-        return redirect(url_for('index'))
-    book_catalog = get_Books()
-    return render_template(
-        'dashboard.html',
-        current_user=session['username'],
-        username=session.get("username"),
-        catalog=book_catalog
-    )  
+        recommendations = fallback_books
 
-
-
-
-@app.route('/profile')
-def profile():
-
-    # Prevent access if not logged in
+    if len(recommendations) > 5:
+        recommendations = recommendations[:5]
     
 
-    if 'username' not in session:
-        return redirect(url_for('index'))
+    return render_template('dashboard.html', user=user, recommendations=recommendations,catalog_books=catalog_books)
 
-    return render_template(
-        'profile.html',
-        current_user=session['username']
-    )
-
-@app.route('/search')
-def search():
-
-    # Prevent access if not logged in
-    if 'username' not in session:
-        return redirect(url_for('index'))
-
-    return render_template(
-        'search.html',
-        current_user=session['username']
-    )
+@app.route("/view/<title>")
+@login_required
+def view_book(title):
+    user = session.get("username")
+    track_activity(user, title, "view")
+    
+    flash(f"You viewed {title}!", "info")
+    return redirect(url_for('dashboard'))
+ # Redirects back instead of loading a missing HTML file
 
 
-@app.route('/logout')
-def logout():
+@app.route("/read/<title>")
+@login_required
+def read_book(title):
+    user = session.get("username")
+    track_activity(user,title,"read")
 
-    session.pop('username', None)
+    flash(f"reading {title}!", "info")
+    return redirect(url_for('dashboard'))
 
-    flash('Logged out successfully!', 'info')
+@app.route("/favorite", methods=["POST"])
+@login_required
+def favorite():
+    user = session.get("username")
+    title = request.form.get("title")
+    track_activity(user, title , "favorite")
 
-    return redirect(url_for('index'))
+    return redirect(url_for('dashboard'))
 
-
-
-
-
-if __name__ == '__main__':
-from flask import Flask, render_template, request, redirect, url_for, flash, session
-import os
-
-
-app = Flask(__name__)
-app.secret_key = "Library_Secret_Key"
-
-USERS_DB = {
-    "admin": "admin",
-    "DwightRamos": "ginger",
-    "EthanMathhew": "Piang",
-    "Shawnnicks05": "Bading"
-}
-
-
-BOOKS_DIR = os.path.join(app.root_path, 'static', 'Book_Covers')
-
-def get_Books():
-    catalog = {}
-    if not os.path.exists(BOOKS_DIR):
-        return catalog
-
-    for category in os.listdir(BOOKS_DIR):
-        category_path = os.path.join(BOOKS_DIR, category)
-        
-        if(os.path.isdir(category_path)):
-            catalog[category] = []
-
-            for filename in os.listdir(category_path):
-                if filename.lower().endswith(('.png')):
-
-                            
-                    book_title = os.path.splitext(filename)[0].title()
-                    catalog[category].append({
-                        'title': book_title,
-                        'category': category,
-                        'cover_image': filename
-                    })
-
-    return catalog
-
-@app.route('/')
-def index():
-
-    # If already logged in
-    if 'username' in session:
-        return redirect(url_for('dashboard'))
-
-    return render_template(
-        'login.html',
-        login_success=False
-    )
-
-
-@app.route('/login', methods=['POST'])
-def login():
-
-    username = request.form.get('username', '').strip()
-    password = request.form.get('password', '').strip()
-
-    # Validation
-    if not username:
-        return render_template(
-            'login.html',
-            login_success=False,
-            username_err="Username is required."
-        )
-
-    if not password:
-        return render_template(
-            'login.html',
-            login_success=False,
-            username=username,
-            password_err="Password is required."
-        )
-
-    # Username check
-    if username not in USERS_DB:
-        return render_template(
-            'login.html',
-            login_success=False,
-            username_err="Username not found."
-        )
-
-    # Password check
-    if USERS_DB[username] != password:
-        return render_template(
-            'login.html',
-            login_success=False,
-            username=username,
-            password_err="Incorrect password."
-        )
-
-    # Save login session
-    session['username'] = username
-
-    flash('Login successful!', 'success')
+@app.route("/scores", methods=["POST"])
+def scores():
+    user = session.get("username")
+    title = request.form.get("title")
+    scores = int(request.form.get("scores"))
+    
+    track_activity(user,title,"rate",explicit_score=scores)
 
     return redirect(url_for('dashboard'))
 
 
-@app.route('/dashboard')
-def dashboard():
+
+@app.route('/api/suggested-books')
+def api_suggested_books():
+    user = session.get('username')
+    if not user:
+        return jsonify([])
     
-    # Prevent access if not logged in
-    if 'username' not in session:
-        return redirect(url_for('index'))
-    book_catalog = get_Books()
-    return render_template(
-        'dashboard.html',
-        current_user=session['username'],
-        username=session.get("username"),
-        catalog=book_catalog
-    )  
+    user_scores_dict = get_user_scores(user) or {}
 
+    book_titles = list(user_scores_dict.keys())
 
-
+    return jsonify(book_titles) 
 
 @app.route('/profile')
 def profile():
-
-    # Prevent access if not logged in
-    
-
     if 'username' not in session:
         return redirect(url_for('index'))
 
-    return render_template(
-        'profile.html',
-        current_user=session['username']
-    )
+    return render_template('profile.html', user=session.get('username'))
+
 
 @app.route('/search')
 def search():
+    user = session.get("username")
+    query = request.args.get('q','').strip().lower()
 
-    # Prevent access if not logged in
     if 'username' not in session:
         return redirect(url_for('index'))
 
-    return render_template(
-        'search.html',
-        current_user=session['username']
-    )
+    all_suggestions = get_flat_recommendations(user)
+
+    if query:
+
+        books_to_show = [b for b in all_suggestions 
+                         if query in b['title'].lower() or query in b['category'].lower()]
+    else:
+
+        books_to_show = all_suggestions
+
+
+    return render_template('search.html',user=user,books_to_show=books_to_show)
 
 
 @app.route('/logout')
 def logout():
-
     session.pop('username', None)
-
     flash('Logged out successfully!', 'info')
-
     return redirect(url_for('index'))
-
-
-
 
 
 if __name__ == '__main__':

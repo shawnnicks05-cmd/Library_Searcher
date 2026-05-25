@@ -210,26 +210,25 @@ input[type="radio"][name="view-switch"] {
     position: absolute;
     top: 110%;
     right: 0;
-<<<<<<< HEAD:WEB_PYthon/style.css
+
     background-color: #1c2723; /* Dropdown panel background (Cozy study green) */
     border: 1px solid #354640;
-=======
+
 
     background-color: #181818;
     border: 1px solid #333;
 
->>>>>>> origin/main:library_Searcher/static/style.css
+
     width: 260px;
-    border-radius: 4px;
+    border-radius: 4px; 
     padding: 15px;
-<<<<<<< HEAD:WEB_PYthon/style.css
+
     box-shadow: 0 8px 24px rgba(0,0,0,0.6);
-=======
+
 
     box-shadow: 0 8px 16px rgba(0,0,0,0.5);
 
     z-index: 1000;
->>>>>>> origin/main:library_Searcher/static/style.css
 }
 
 .search-container:focus-within .search-dropdown {
@@ -426,17 +425,17 @@ home button
     transform: scale(1.1);
   }
 
-}
+
 .settings-group { margin-top: 25px; }
-<<<<<<< HEAD:WEB_PYthon/style.css
+
 .settings-group h3 { border-bottom: 1px solid #422d1b; padding-bottom: 8px; margin-bottom: 15px; font-size: 1.1rem; color: #dfb15b; }
 .setting-item { display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 0.95rem; color: #c0b59f; }
-=======
+
 .settings-group h3 { border-bottom: 1px solid #333; padding-bottom: 8px; margin-bottom: 15px; font-size: 1.1rem; }
 .setting-item { display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 0.95rem; color: #ccc; }
 
 .profile-link {
-    text-decoration: none;
+    text-decoration: none;  
     color: inherit;
 }
 
@@ -458,4 +457,3 @@ home button
     font-size: 0.95rem;
     font-weight: 500;
 }
->>>>>>> origin/main:library_Searcher/static/style.css

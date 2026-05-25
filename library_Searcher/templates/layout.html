@@ -19,26 +19,70 @@
                 </div>
                 <span href="{{ url_for('dashboard') }}" class="home-btn" style="text-decoration: none;">Library Searcher</span>
             </div>
+            
             <div class="nav-right">
-                <div class="search-container">
-                    <input type="text" placeholder="Search books, genres..." class="search-input">
-                    <div class="search-dropdown">
-                        <div class="dropdown-section">
-                            <h4>Suggested For You</h4>
-                            <div class="genre-tags"><span class="tag">Trending Books</span></div>
-                        </div>
-                        <div class="dropdown-section">
-                            <h4>Recent Searches</h4>
-                            <ul class="recent-list">
-                                <li class="empty-text">No recent searches</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <!-- THE FIX: Your form now wraps the input and handles submission to app.py -->
+             <form action="{{ url_for('search') }}" method="GET" class="search-container">
+    <input type="text" name="q" placeholder="Search books, genres..." class="search-input" value="{{ query or '' }}">
+    
+    <div class="search-dropdown">
+        <div class="dropdown-section">
+            <h4>Suggested For You</h4>
+            
+            <!-- CHANGES HERE: Changed to an empty box waiting for Python's data -->
+            <div id="dropdown-books-container" style="display: flex; flex-direction: column; gap: 10px; margin-top: 10px;">
+                <!-- Python will insert the images/titles here on click -->
+            </div>
+            
+        </div>
+        <div class="dropdown-section">
+            <h4>Recent Searches</h4>
+            <ul class="recent-list">
+                <li class="empty-text">No recent searches</li>
+            </ul>
+        </div>
+    </div>
+</form>
+
+<!-- ADD THIS SCRIPT DIRECTLY UNDER THE FORM -->
+<script>
+document.querySelector('.search-input').addEventListener('focus', function() {
+    const container = document.getElementById('dropdown-books-container');
+
+    // Automatically fetch the data from your Python API route
+    fetch('/api/suggested-books')
+        .then(response => response.json())
+        .then(bookTitles => {
+            if (bookTitles.length > 0) {
+                container.innerHTML = ''; // Clear out any old text
+                
+                // Build and display each book item visually
+                bookTitles.forEach(title => {
+                    const row = `
+                        <a href="/view_book/${encodeURIComponent(title)}" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; padding: 6px; border-radius: 4px; transition: background 0.2s;">
+                            <!-- Book icon box (since your JSON doesn't have cover image paths) -->
+                            <div style="width: 35px; height: 48px; background: #333; border-radius: 4px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+                                <i class="fa-solid fa-book" style="color: #888; font-size: 16px;"></i>
+                            </div>
+                            <!-- Book Title Text -->
+                            <div style="overflow: hidden; text-align: left;">
+                                <p style="margin: 0; font-size: 13px; font-weight: bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #fff;">
+                                    ${title}
+                                </p>
+                            </div>
+                        </a>
+                    `;
+                    container.insertAdjacentHTML('beforeend', row);
+                });
+            }
+        });
+});
+</script>
+
                 <a href="{{ url_for('profile') }}" class="profile-link">
                     <div class="profile-container">
                         <i class="fa-solid fa-circle-user profile-icon"></i>
-                        <div class="username">{{ username }}</div>
+                        <div class="username">{{ user }}</div>
                     </div>
                 </a>
             </div>

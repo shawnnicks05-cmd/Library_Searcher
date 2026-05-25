@@ -1,25 +1,44 @@
 {% extends "layout.html" %}
 {% block content %}
 
-
-<div id="panel-profile" class="sub-panel" style="display: block;">
+<div id="panel-search" class="sub-panel" style="display: block; padding: 20px;">
     <div class="panel-container">
-        <div class="profile-header">
-            <div class="profile-avatar-large">
-                {{ current_user[0].upper() if current_user else '?' }}
-            </div>
-            <h1>{{ current_user if current_user else 'Guest User' }}</h1>
-            <p class="profile-badge">Account Verified</p>
+        
+        <!-- Conditional Title: Changes based on whether the user searched for something -->
+        <div class="search-page-header" style="margin-bottom: 30px;">
+            {% if query %}
+                <h1 style="color: #fff; font-size: 28px;">Search Results for "{{ query }}"</h1>
+            {% else %}
+                <h1 style="color: #fff; font-size: 28px;">Suggested For You</h1>
+            {% endif %}
         </div>
-        <div class="profile-stats">
-            <div class="stat-box"><h3>0</h3><p>Books Read</p></div>
-            <div class="stat-box"><h3>0</h3><p>Pages Flipped</p></div>
-            <div class="stat-box"><h3>0 Days</h3><p>Current Streak</p></div>
+
+        <!-- Single Clean Grid for Displaying Books -->
+        <div class="search-results-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 20px;">
+            
+            {% for book in books_to_show %}
+                <div class="book-card" style="text-align: center;">
+                    <a href="{{ url_for('view_book', title=book['title']) }}" style="display: block; text-decoration: none;">
+                        <div class="book-cover" style="height: 220px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+                            <img src="{{ url_for('static', filename='Book_Covers/' ~ book['category'] ~ '/' ~ book['cover_image']) }}" 
+                                 alt="{{ book['title'] }}" 
+                                 style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <p style="margin-top: 10px; font-weight: bold; font-size: 14px; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                            {{ book['title'] }}
+                        </p>
+                    </a>
+                    <span style="font-size: 12px; color: #ff793f; background: rgba(255,121,63,0.1); padding: 2px 8px; border-radius: 20px;">
+                        {{ book['category'].replace('_', ' ').title() }}
+                    </span>
+                </div>
+            {% else %}
+                <p style="color: #666; font-style: italic; grid-column: 1/-1;">No books found. Try looking for something else!</p>
+            {% endfor %}
+            
         </div>
-        <!-- Route action links back to a clean landing point -->
-        <a href="{{ url_for('logout') }}" class="logout-btn center-text" style="text-decoration: none; display: block;">Log Out / Exit</a>
+
     </div>
 </div>
-
 
 {% endblock %}
