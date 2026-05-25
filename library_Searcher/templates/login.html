@@ -11,30 +11,34 @@
     <div class="view-panel auth-screen" style="display: flex;">
         <div class="auth-wrapper">
             <h1 class="auth-logo">Library Searcher</h1>
-
+            
             <div class="auth-box-container">
                 <div class="auth-box">
                     <h2>Sign In</h2>
                     <form action="{{ url_for('login') }}" method="POST">
-
+                        
+                        <!-- USERNAME FIELD -->
                         <div class="input-group">
-                            <input name="username" type="text" placeholder="Username"
-                                   value="{{ username or '' }}" required>
+                            <input name="username" type="text" placeholder="Username" value="{{ username or '' }}" required>
                             {% if username_err %}
-                                <span class="field-error-msg">{{ username_err }}</span>
+                                <span class="field-error-msg" style="color: #ff4a4a; font-size: 12px; display: block; margin-top: 5px;">
+                                    {{ username_err }}
+                                </span>
                             {% endif %}
                         </div>
-
+                        
+                        <!-- PASSWORD FIELD -->
                         <div class="input-group" style="margin-top: 15px;">
-                            <input name="password" type="password" placeholder="Password"
-                                   required autocomplete="off">
+                            
+                            <input name="password" type="password" placeholder="Password" required autocomplete="off">
                             {% if password_err %}
-                                <span class="field-error-msg">{{ password_err }}</span>
+                                <span class="field-error-msg" style="color: #ff4a4a; font-size: 12px; display: block; margin-top: 5px;">
+                                    {{ password_err }}
+                                </span>
                             {% endif %}
                         </div>
-
-                        <button type="submit" class="auth-btn center-text"
-                                style="margin-top: 20px;">Sign In</button>
+                        
+                        <button type="submit" class="auth-btn center-text" style="margin-top: 20px;">Sign In</button>
                     </form>
                 </div>
             </div>

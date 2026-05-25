@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library Searcher</title>
+    <title>Library Searcher Template</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -17,31 +17,19 @@
                         <i class="fa-solid fa-house"></i>
                     </a>
                 </div>
-                <span class="home-btn">Library Searcher</span>
+                <span href="{{ url_for('dashboard') }}" class="home-btn" style="text-decoration: none;">Library Searcher</span>
             </div>
             <div class="nav-right">
                 <div class="search-container">
-                    <input type="text"
-                           id="searchInput"
-                           placeholder="Search books, categories..."
-                           class="search-input"
-                           autocomplete="off">
-                    <div class="search-dropdown" id="searchDropdown" style="display:none;">
+                    <input type="text" placeholder="Search books, genres..." class="search-input">
+                    <div class="search-dropdown">
                         <div class="dropdown-section">
                             <h4>Suggested For You</h4>
-                            <div class="genre-tags">
-                                <span class="tag" onclick="doSearch('Fantasy')">Fantasy</span>
-                                <span class="tag" onclick="doSearch('Fiction')">Fiction</span>
-                                <span class="tag" onclick="doSearch('Sci-Fi')">Sci-Fi</span>
-                            </div>
-                        </div>
-                        <div class="dropdown-section" id="liveSuggestions" style="display:none;">
-                            <h4>Suggestions</h4>
-                            <ul class="recent-list" id="suggestionsList"></ul>
+                            <div class="genre-tags"><span class="tag">Trending Books</span></div>
                         </div>
                         <div class="dropdown-section">
                             <h4>Recent Searches</h4>
-                            <ul class="recent-list" id="recentList">
+                            <ul class="recent-list">
                                 <li class="empty-text">No recent searches</li>
                             </ul>
                         </div>
@@ -60,80 +48,6 @@
             {% block content %}{% endblock %}
         </div>
     </div>
-
-    <script>
-        const searchInput = document.getElementById('searchInput');
-        const dropdown = document.getElementById('searchDropdown');
-        const suggestionsList = document.getElementById('suggestionsList');
-        const liveSuggestions = document.getElementById('liveSuggestions');
-        const recentList = document.getElementById('recentList');
-
-        let debounceTimer;
-
-        searchInput.addEventListener('focus', () => {
-            dropdown.style.display = 'block';
-            loadRecentSearches();
-        });
-
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('.search-container')) {
-                dropdown.style.display = 'none';
-            }
-        });
-
-        searchInput.addEventListener('input', () => {
-            clearTimeout(debounceTimer);
-            debounceTimer = setTimeout(() => fetchSuggestions(searchInput.value), 250);
-        });
-
-        searchInput.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter') doSearch(searchInput.value);
-        });
-
-        function doSearch(query) {
-            if (query.trim()) {
-                window.location.href = `/search?q=${encodeURIComponent(query.trim())}`;
-            }
-        }
-
-        async function fetchSuggestions(query) {
-            if (query.length < 2) {
-                liveSuggestions.style.display = 'none';
-                return;
-            }
-            const res = await fetch(`/api/search-suggestions?q=${encodeURIComponent(query)}`);
-            const data = await res.json();
-
-            suggestionsList.innerHTML = '';
-            const allSuggestions = [
-                ...data.books.map(b => ({ label: `📖 ${b}`, value: b })),
-                ...data.categories.map(c => ({ label: `🏷️ ${c}`, value: c })),
-            ];
-
-            if (allSuggestions.length) {
-                allSuggestions.forEach(({ label, value }) => {
-                    const li = document.createElement('li');
-                    li.textContent = label;
-                    li.style.cursor = 'pointer';
-                    li.onclick = () => doSearch(value);
-                    suggestionsList.appendChild(li);
-                });
-                liveSuggestions.style.display = 'block';
-            } else {
-                liveSuggestions.style.display = 'none';
-            }
-        }
-
-        async function loadRecentSearches() {
-            const res = await fetch('/api/recent-searches');
-            const recent = await res.json();
-            if (recent.length) {
-                recentList.innerHTML = recent
-                    .map(q => `<li style="cursor:pointer" onclick="doSearch('${q}')">${q}</li>`)
-                    .join('');
-            }
-        }
-    </script>
 
 </body>
 </html>
