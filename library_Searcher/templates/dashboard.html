@@ -1,88 +1,52 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<div class="view-container">
-    <div id="panel-home" class="sub-panel" style="display: block;">
-        
-        <!-- Continue Reading Section (Placeholder Cards) -->
-        <section class="book-row-section">
-            <h2>Continue Reading</h2>
-            <div class="book-slider">
-                <div class="book-card progress-card">
-                    <div class="book-cover cover-1"><span>Neuromancer</span></div>
-                    <div class="progress-container">
-                        <div class="progress-bar" style="width: 0%;"></div>
-                        <span class="progress-text">Not started yet</span>
-                    </div>
-                </div>
-                <div class="book-card progress-card">
-                    <div class="book-cover cover-2"><span>Foundation</span></div>
-                    <div class="progress-container">
-                        <div class="progress-bar" style="width: 0%;"></div>
-                        <span class="progress-text">Not started yet</span>
-                    </div>
+<div id="panel-home" class="sub-panel" style="display: block;">
+
+    <section class="book-row-section">
+        <h2>Continue Reading</h2>
+        <div class="book-slider">
+            <div class="book-card progress-card">
+                <div class="book-cover cover-1"><span>Neuromancer</span></div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 0%;"></div>
+                    <span class="progress-text">Not started yet</span>
                 </div>
             </div>
-        </section>
+            <div class="book-card progress-card">
+                <div class="book-cover cover-2"><span>Foundation</span></div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 0%;"></div>
+                    <span class="progress-text">Not started yet</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- Uncategorized AI Recommendations Slider Row -->
+    {% for category, books in catalog.items() %}
         <section class="book-row-section">
-            <h2>Recommended for you</h2>
+            <h2>{{ category }} Recommendations</h2>
             <div class="book-slider">
-                
-                {% for book in recommendations %}
-                    <div class="book-card">
-                        <!-- Linked directly to your view_book routing function -->
-                        <a href="{{ url_for('view_book', title=book['title']) }}" style="display: block; width: 100%; height: 100%;">
-                            <div class="book-cover" style="padding: 0; box-shadow: none;">
-                                <!-- Uses the category path embedded straight into the book item -->
-                                <img src="{{ url_for('static', filename='Book_Covers/' ~ book['category'] ~ '/' ~ book['cover_image']) }}" 
-                                     alt="{{ book['title'] }}" 
-                                     style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;">
+                {% for book in books %}
+                    <a href="{{ url_for('book_detail', category=book['category'], title=book['title']) }}"
+                       style="text-decoration: none;">
+                        <div class="book-card" style="width: 130px; cursor: pointer;">
+                            <div style="width: 130px; height: 190px; border-radius: 6px; overflow: hidden;">
+                                <img src="{{ url_for('static', filename='Book_Covers/' ~ category ~ '/' ~ book['cover_image']) }}"
+                                     alt="{{ book['title'] }}"
+                                     style="width: 100%; height: 100%; object-fit: cover;">
                             </div>
-                        </a>
-                        
-                        <p style="margin-top: 8px; font-weight: bold; font-size: 14px; color: #fff; text-align: center;">
-                            {{ book['title'] }}
-                        </p>
-
-                        <!-- Background Favorite Interception Action Button -->
-                        <div style="text-align: center; margin-top: 4px;">
-                            <button class="fav-btn" data-title="{{ book['title'] }}" style="background: none; border: none; color: #aaa; cursor: pointer; font-size: 12px;">
-                                ❤️ Favorite
-                            </button>
+                            <p style="margin-top: 8px; font-weight: bold; font-size: 13px; color: #fff;
+                                       text-align: center; word-wrap: break-word;">
+                                {{ book['title'] }}
+                            </p>
                         </div>
-                    </div>
+                    </a>
                 {% endfor %}
-                
             </div>
         </section>
+    {% endfor %}
 
-    </div>
 </div>
-
-<!-- JavaScript snippet to handle the "Favorite" button clicking silently -->
-<script>
-document.querySelectorAll('.fav-btn').forEach(button => {
-    button.addEventListener('click', function(e) {
-        e.preventDefault();
-        const bookTitle = this.getAttribute('data-title');
-        const formData = new FormData();
-        formData.append('title', bookTitle);
-
-        fetch('/favorite', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            if(data.status === 'ok') {
-                this.style.color = '#ff4757';
-                this.innerText = '❤️ Favorited!';
-            }
-        });
-    });
-});
-</script>
 
 {% endblock %}
