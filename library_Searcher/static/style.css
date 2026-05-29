@@ -281,8 +281,12 @@ input[type="radio"][name="view-switch"] {
 .book-card {
     min-width: 160px;
     width: 160px;
-    height: 230px;
+    height: 280px;
     transition: transform 0.3s;
+    display: flex;
+    overflow:visible;
+    border-radius:4px;
+    flex-direction:column;
     cursor: pointer;
 }
 
@@ -291,18 +295,35 @@ input[type="radio"][name="view-switch"] {
 }
 
 .book-cover {
-    width: 100%;
-    height: 100%;
+    width: 160px;
+    height: 230px;
     border-radius: 4px;
     display: flex;
     align-items: flex-end;
     padding: 15px;
     font-weight: bold;
     font-size: 0.9rem;
+    overflow: hidden;
     box-shadow: inset 0 -60px 40px rgba(0,0,0,0.8);
     border-left: 3px solid rgba(255,255,255,0.1); /* Adds a subtle visual "spine" highlight to book covers */
+    object-fit: cover;
+    flex-shrink: 0;
 }
-
+.book-cover img {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    object-fit: cover;
+}
+.book-title {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #f2ebd9;
+    text-align: center;
+    white-space: nowrap;      /* Prevents wrapping, keeps it neat */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 /* Book Cover Gradients (Classic library leather, cloth, and paper spine colors) */
 .cover-1 { background: linear-gradient(45deg, #1f2d24, #3b5243); } /* Hunter Green */
 .cover-2 { background: linear-gradient(45deg, #421e15, #733c31); } /* Vintage Burgundy */

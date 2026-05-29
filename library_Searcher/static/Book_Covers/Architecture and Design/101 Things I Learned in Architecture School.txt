@@ -1,0 +1,13 @@
+Book Title : 101 Things I Didn't Learn in Architecture School
+
+Description : A highly practical, straight-talking career guide written specifically for architecture graduates, interns, and young professionals transitioning from university to corporate practice. While design school focuses heavily on abstract theories and spatial philosophies, this book bridges the gap by explaining the everyday business, political, legal, and operational realities of working in a commercial architecture firm.
+
+Date : December 23, 2019
+
+Author : Sarah Lebner
+
+Category : Architecture / Professional Practice / Career Development
+
+Book id : ARCDES004
+
+Book shelf id : A123

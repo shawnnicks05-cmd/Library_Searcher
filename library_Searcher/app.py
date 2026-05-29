@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, flash, ses
 import os
 import json
 # 🟢 Import the recommendation engine functions
-from recommender import track_activity, get_recommended_catalog
+from recommender import track_activity, get_recommended_catalog,get_flat_recommendations,get_Books, get_user_scores
 
 app = Flask(__name__)
 app.secret_key = "Library_Secret_Key"
@@ -16,28 +16,6 @@ USERS_DB = {
 
 BOOKS_DIR = os.path.join(app.root_path, 'static', 'Book_Covers')
 
-def get_Books():
-    catalog = {}
-    print(f"DEBUG: Python is searching for your book covers here: {BOOKS_DIR}")
-    if not os.path.exists(BOOKS_DIR):
-        return catalog
-
-    for category in os.listdir(BOOKS_DIR):
-        category_path = os.path.join(BOOKS_DIR, category)
-
-        if os.path.isdir(category_path):
-            catalog[category] = []
-
-            for filename in os.listdir(category_path):
-                if filename.lower().endswith('.png'):
-                    book_title = os.path.splitext(filename)[0].title()
-                    catalog[category].append({
-                        'title': book_title,
-                        'category': category,
-                        'cover_image': filename
-                    })
-
-    return catalog
 
 
 # ─── Routes ───────────────────────────────────────────────────────────────────
@@ -83,11 +61,11 @@ def dashboard():
         return redirect(url_for('index'))
 
     # 🟢 Swapped the static get_Books() for your recommended dynamic catalog sorter
-    book_catalog = get_recommended_catalog(session['username'])
+    book_catalog = get_flat_recommendations(session['username'])
     return render_template('dashboard.html',
                            current_user=session['username'],
                            username=session.get('username'),
-                           catalog=book_catalog)
+                           recommendations=book_catalog)
 
 
 @app.route('/profile')
@@ -163,7 +141,7 @@ def get_recent_searches():
 
     return jsonify(session.get('recent_searches', []))
 
-BOOKS_CONTENT_DIR = os.path.join(app.root_path, 'static', 'Book_Content')
+BOOKS_CONTENT_DIR = os.path.join(app.root_path, 'static', 'Book_Covers')
 
 # Fake author/description data per book (add more as needed)
 BOOK_META = {
@@ -215,18 +193,21 @@ def book_read(category, title):
 
     # 🟢 Track book text file read activation action
     track_activity(session['username'], title, "read")
-
+    
     # Find matching .txt file (case-insensitive)
     content = "No content available for this book yet."
-    content_category_path = os.path.join(BOOKS_CONTENT_DIR, category)
+    content_category_path = os.path.join(app.static_folder, 'Book_Covers', category)
+    clean_target_name = title.lower().replace('_', ' ').replace('-', ' ').strip()
+
 
     if os.path.exists(content_category_path):
         for filename in os.listdir(content_category_path):
-            if os.path.splitext(filename)[0].title() == title and filename.endswith('.txt'):
-                filepath = os.path.join(content_category_path, filename)
-                with open(filepath, 'r', encoding='utf-8') as f:
-                    content = f.read()
-                break
+            if filename.endswith('.txt'):
+                clean_filename = os.path.splitext(filename)[0].lower().replace('_', ' ').replace('-', ' ').strip()
+                if clean_filename == clean_target_name:
+                    with open(os.path.join(content_category_path, filename), 'r', encoding='utf-8') as f:
+                        content = f.read()
+                    break
 
     return render_template('book_read.html',
                            username=session.get('username'),
@@ -236,7 +217,7 @@ def book_read(category, title):
                            content=content)
 
 
-LIKES_FILE = os.path.join(app.root_path, 'likes.json')
+LIKES_FILE = os.path.join(app.root_path, 'data/likes.json')
 
 def load_likes():
     if not os.path.exists(LIKES_FILE):
@@ -282,6 +263,7 @@ def toggle_like(category, title):
 
     save_likes(likes)
     return jsonify({'liked': liked, 'count': len(likes[key])})
+
 
 @app.route('/logout')
 def logout():
