@@ -89,26 +89,25 @@ def get_recommended_catalog(username: str) -> dict:
      recommended_catalog = {}
 
      for category, books in all_books.items():
-          category_has_activity = False
+         category_has_activity = False
+         scored_books = []
+         unscored_books = []
+         
+         for book in books:
+             book_title = book['title']
 
-          scored_books = []
-          unscored_books = []
-          
-          for book in books:
-              book_title = book['title']
-
-              if book_title in user_scores and user_scores[book_title] > 0:
-                   category_has_activity = True
-                   book['score'] = user_scores[book_title]
-                   scored_books.append(book)
-              else:
-                   book['score'] = 0
-                   unscored_books.append(book)
+             if book_title in user_scores and user_scores[book_title] > 0:
+                  category_has_activity = True
+                  book['score'] = user_scores[book_title]
+                  scored_books.append(book)
+             else:
+                  book['score'] = 0
+                  unscored_books.append(book)
         
-          if category_has_activity:
-               scored_books.sort(key=lambda x: x['score'], reverse=True)
+         if category_has_activity:
+              scored_books.sort(key=lambda x: x['score'], reverse=True)
 
-               recommended_catalog[category] = scored_books + unscored_books
+         recommended_catalog[category] = scored_books + unscored_books
      if not recommended_catalog:
           return all_books
      return recommended_catalog

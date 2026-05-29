@@ -97,7 +97,7 @@
         }
 
         async function fetchSuggestions(query) {
-            if (query.length < 2) {
+            if (query.length < 1) {
                 liveSuggestions.style.display = 'none';
                 return;
             }
@@ -105,22 +105,37 @@
             const data = await res.json();
 
             suggestionsList.innerHTML = '';
-            const allSuggestions = [
-                ...data.books.map(b => ({ label: `📖 ${b}`, value: b })),
-                ...data.categories.map(c => ({ label: `🏷️ ${c}`, value: c })),
-            ];
 
-            if (allSuggestions.length) {
-                allSuggestions.forEach(({ label, value }) => {
+            if (data.length) {
+                data.forEach(book => {
                     const li = document.createElement('li');
-                    li.textContent = label;
                     li.style.cursor = 'pointer';
-                    li.onclick = () => doSearch(value);
+                    li.style.display = 'flex';
+                    li.style.alignItems = 'center';
+                    li.style.gap = '10px';
+                    li.style.padding = '8px';
+
+                    li.innerHTML = `
+                        <img src="${book.cover_image}" alt="cover" style="width: 30px; height: 40px; object-fit: cover; border-radius: 4px;">
+                        <div>
+                            <div style="font-weight: 500;">📖 ${book.title}</div>
+                            <div style="font-size: 0.8rem; color: #888;">🏷️ ${book.category}</div>
+                        </div>
+                    `;
+                    
+                    li.onclick = () => doSearch(book.title);
                     suggestionsList.appendChild(li);
                 });
                 liveSuggestions.style.display = 'block';
             } else {
-                liveSuggestions.style.display = 'none';
+                const li = document.createElement('li');
+                li.style.padding = '8px';
+                li.style.color = '#ff4d4d';
+                li.style.fontStyle = 'italic';
+                li.style.listStyleType = 'none';
+                li.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i>No results found`;
+                suggestionsList.appendChild(li);
+                liveSuggestions.style.display = 'block';
             }
         }
 

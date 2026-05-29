@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, session, jsonify
 import os
 import json
-# 🟢 Import the recommendation engine functions
 from recommender import track_activity, get_recommended_catalog
 
 app = Flask(__name__)
@@ -40,7 +39,6 @@ def get_Books():
     return catalog
 
 
-# ─── Routes ───────────────────────────────────────────────────────────────────
 
 @app.route('/')
 def index():
@@ -82,7 +80,6 @@ def dashboard():
     if 'username' not in session:
         return redirect(url_for('index'))
 
-    # 🟢 Swapped the static get_Books() for your recommended dynamic catalog sorter
     book_catalog = get_recommended_catalog(session['username'])
     return render_template('dashboard.html',
                            current_user=session['username'],
@@ -115,10 +112,8 @@ def search():
                 if (query in book['title'].lower() or
                         query in book['category'].lower()):
                     results.append(book)
-                    # 🟢 Track search weight for any matched query books found
                     track_activity(session['username'], book['title'], "search")
 
-        # Save recent searches in session
         recent = session.get('recent_searches', [])
         if query not in recent:
             recent.insert(0, query)
@@ -138,20 +133,19 @@ def search_suggestions():
         return jsonify([])
 
     query = request.args.get('q', '').strip().lower()
-    suggestions = {"books": [], "categories": []}
+    suggestions = []
 
-    if len(query) >= 2:
+    if len(query) >= 1:
         book_catalog = get_Books()
-        seen_categories = set()
 
         for category, books in book_catalog.items():
             for book in books:
-                if query in book['title'].lower():
-                    suggestions["books"].append(book['title'])
-
-                if query in category.lower() and category not in seen_categories:
-                    suggestions["categories"].append(category)
-                    seen_categories.add(category)
+                if query in book['title'].lower() or query in book['category'].lower():
+                    suggestions.append({
+                        'title': book['title'],
+                        'category': book['category'],
+                        'cover_image': f"/static/Book_Covers/{book['category']}/{book['cover_image']}"
+                    })
 
     return jsonify(suggestions)
 
@@ -165,7 +159,6 @@ def get_recent_searches():
 
 BOOKS_CONTENT_DIR = os.path.join(app.root_path, 'static', 'Book_Content')
 
-# Fake author/description data per book (add more as needed)
 BOOK_META = {
     "default": {
         "author": "Unknown Author",
@@ -182,7 +175,6 @@ def book_detail(category, title):
     if 'username' not in session:
         return redirect(url_for('index'))
 
-    # 🟢 Track page view action
     track_activity(session['username'], title, "view")
 
     meta = get_book_meta(title)
@@ -213,10 +205,9 @@ def book_read(category, title):
     if 'username' not in session:
         return redirect(url_for('index'))
 
-    # 🟢 Track book text file read activation action
     track_activity(session['username'], title, "read")
 
-    # Find matching .txt file (case-insensitive)
+    
     content = "No content available for this book yet."
     content_category_path = os.path.join(BOOKS_CONTENT_DIR, category)
 
@@ -277,7 +268,6 @@ def toggle_like(category, title):
     else:
         likes[key].append(username)
         liked = True
-        # 🟢 Track action score calculation only if they successfully toggle "Like On"
         track_activity(username, title, "favorite")
 
     save_likes(likes)
@@ -290,7 +280,6 @@ def logout():
     return redirect(url_for('index'))
 
 
-# ──────────────────────────────────────────────────────────────────────────────
 
 if __name__ == '__main__':
     app.run(debug=True)
