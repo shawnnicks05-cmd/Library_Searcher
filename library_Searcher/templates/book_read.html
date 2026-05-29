@@ -1,25 +1,29 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<div id="panel-book-read" class="sub-panel" style="display: block;">
-    <div class="panel-container" style="max-width: 750px; margin: 0 auto; padding: 30px;">
+<div class="reading-body" id="panel-book-read">
+    <div class="reader-container">
 
-        <!-- Back button -->
-        <a href="javascript:history.back()"
-           style="color: #aaa; text-decoration: none; font-size: 14px;">
+        <a href="javascript:history.back()" class="back-btn">
             ← Back to Book
         </a>
 
-        <h1 style="color: #fff; margin: 20px 0 4px;">{{ title }}</h1>
-        <p style="color: #aaa; font-size: 13px; margin-bottom: 30px;">🏷️ {{ category }}</p>
+        <header class="book-header">
+            <h1>{{ title }}</h1>
+            <div class="book-meta">
+                <span class="category-badge">🏷️ {{ category }}</span>
+            </div>
+        </header>
 
-        <hr style="border-color: #333; margin-bottom: 30px;">
+        <hr class="reader-divider">
 
-        <!-- Book content -->
-        <div style="color: #ddd; font-size: 16px; line-height: 1.9;
-                    white-space: pre-wrap; font-family: Georgia, serif;">
+        <article class="book-content-stream">
             {{ content }}
-        </div>
+        </article>
+
+        <footer class="reader-footer">
+            ✦ END OF SELECTION ✦
+        </footer>
 
     </div>
 </div>
