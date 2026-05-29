@@ -21,6 +21,28 @@ def load_users() -> dict:
     with open("data/users.json", "r") as f:
         return json.load(f)
 
+<<<<<<< HEAD
+=======
+    for category in os.listdir(BOOKS_DIR):
+        category_path = os.path.join(BOOKS_DIR, category)
+
+        if os.path.isdir(category_path):
+            catalog[category] = []
+
+            for filename in os.listdir(category_path):
+                if filename.lower().endswith('.png'):
+                    book_title = os.path.splitext(filename)[0].title()
+                    catalog[category].append({
+                        'title': book_title,
+                        'category': category,
+                        'cover_image': filename
+                    })
+
+    return catalog
+
+
+
+>>>>>>> 611d268 (Push)
 
 @app.route('/')
 def index():
@@ -151,8 +173,160 @@ def search():
 
     if query:
 
+<<<<<<< HEAD
         books_to_show = [b for b in all_suggestions 
                          if query in b['title'].lower() or query in b['category'].lower()]
+=======
+        # Save recent searches in session
+        recent = session.get('recent_searches', [])
+        if query not in recent:
+            recent.insert(0, query)
+            session['recent_searches'] = recent[:5]
+            session.modified = True
+
+    return render_template('search.html',
+                           current_user=session['username'],
+                           username=session.get('username'),
+                           results=results,
+                           query=query)
+
+
+@app.route('/api/search-suggestions')
+def search_suggestions():
+    if 'username' not in session:
+        return jsonify([])
+
+    query = request.args.get('q', '').strip().lower()
+    suggestions = {"books": [], "categories": []}
+
+    if len(query) >= 2:
+        book_catalog = get_Books()
+        seen_categories = set()
+
+        for category, books in book_catalog.items():
+            for book in books:
+                if query in book['title'].lower():
+                    suggestions["books"].append(book['title'])
+
+                if query in category.lower() and category not in seen_categories:
+                    suggestions["categories"].append(category)
+                    seen_categories.add(category)
+
+    return jsonify(suggestions)
+
+
+@app.route('/api/recent-searches')
+def get_recent_searches():
+    if 'username' not in session:
+        return jsonify([])
+
+    return jsonify(session.get('recent_searches', []))
+
+BOOKS_CONTENT_DIR = os.path.join(app.root_path, 'static', 'Book_Content')
+
+# Fake author/description data per book (add more as needed)
+BOOK_META = {
+    "default": {
+        "author": "Unknown Author",
+        "year": "2024",
+        "description": "A captivating story that takes readers on an unforgettable journey through vivid worlds and compelling characters."
+    }
+}
+
+def get_book_meta(title):
+    return BOOK_META.get(title, BOOK_META["default"])
+
+@app.route('/book/<category>/<title>')
+def book_detail(category, title):
+    if 'username' not in session:
+        return redirect(url_for('index'))
+
+    meta = get_book_meta(title)
+    cover_image = None
+    category_path = os.path.join(BOOKS_DIR, category)
+    if os.path.exists(category_path):
+        for filename in os.listdir(category_path):
+            if os.path.splitext(filename)[0].title() == title:
+                cover_image = filename
+                break
+
+    like_count = get_like_count(category, title)
+    user_liked = has_user_liked(category, title, session['username'])
+
+    return render_template('book_detail.html',
+                           username=session.get('username'),
+                           current_user=session['username'],
+                           title=title,
+                           category=category,
+                           cover_image=cover_image,
+                           meta=meta,
+                           like_count=like_count,
+                           user_liked=user_liked)
+
+
+@app.route('/book/<category>/<title>/read')
+def book_read(category, title):
+    if 'username' not in session:
+        return redirect(url_for('index'))
+
+    content = "No content available for this book yet."
+    content_category_path = os.path.join(BOOKS_CONTENT_DIR, category)
+
+    if os.path.exists(content_category_path):
+        for filename in os.listdir(content_category_path):
+            if os.path.splitext(filename)[0].title() == title and filename.endswith('.txt'):
+                filepath = os.path.join(content_category_path, filename)
+                with open(filepath, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                break
+
+    return render_template('book_read.html',
+                           username=session.get('username'),
+                           current_user=session['username'],
+                           title=title,
+                           category=category,
+                           content=content)
+
+
+LIKES_FILE = os.path.join(app.root_path, 'likes.json')
+
+def load_likes():
+    if not os.path.exists(LIKES_FILE):
+        return {}
+    with open(LIKES_FILE, 'r') as f:
+        return json.load(f)
+
+def save_likes(likes):
+    with open(LIKES_FILE, 'w') as f:
+        json.dump(likes, f)
+
+def get_like_count(category, title):
+    likes = load_likes()
+    key = f"{category}::{title}"
+    return len(likes.get(key, []))
+
+def has_user_liked(category, title, username):
+    likes = load_likes()
+    key = f"{category}::{title}"
+    return username in likes.get(key, [])
+
+
+@app.route('/api/like/<category>/<title>', methods=['POST'])
+def toggle_like(category, title):
+    if 'username' not in session:
+        return jsonify({'error': 'Not logged in'}), 401
+
+    username = session['username']
+    likes = load_likes()
+    key = f"{category}::{title}"
+
+    if key not in likes:
+        likes[key] = []
+
+    if username in likes[key]:
+        likes[key].remove(username)
+        liked = False
+>>>>>>> 611d268 (Push)
     else:
 
         books_to_show = all_suggestions
@@ -168,5 +342,9 @@ def logout():
     return redirect(url_for('index'))
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 611d268 (Push)
 if __name__ == '__main__':
     app.run(debug=True)
