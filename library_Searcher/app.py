@@ -21,31 +21,6 @@ def load_users() -> dict:
     with open("data/users.json", "r") as f:
         return json.load(f)
 
-<<<<<<< HEAD
-=======
-    for category in os.listdir(BOOKS_DIR):
-        category_path = os.path.join(BOOKS_DIR, category)
-
-        if os.path.isdir(category_path):
-            catalog[category] = []
-
-            for filename in os.listdir(category_path):
-                if filename.lower().endswith('.png'):
-                    book_title = os.path.splitext(filename)[0].title()
-                    catalog[category].append({
-                        'title': book_title,
-                        'category': category,
-                        'cover_image': filename
-                    })
-
-    return catalog
-
-
-
-<<<<<<< HEAD
->>>>>>> 611d268 (Push)
-=======
->>>>>>> 611d268bc6f46233a2e3c295b85d71d97c6cb6f2
 
 @app.route('/')
 def index():
@@ -168,29 +143,30 @@ def profile():
 def search():
     user = session.get("username")
     query = request.args.get('q','').strip().lower()
-
+ 
     if 'username' not in session:
         return redirect(url_for('index'))
-
+ 
     all_suggestions = get_flat_recommendations(user)
-
+ 
     if query:
-
-<<<<<<< HEAD
+ 
         books_to_show = [b for b in all_suggestions 
                          if query in b['title'].lower() or query in b['category'].lower()]
-=======
         # Save recent searches in session
         recent = session.get('recent_searches', [])
         if query not in recent:
             recent.insert(0, query)
             session['recent_searches'] = recent[:5]
             session.modified = True
-
+ 
+    else:
+        books_to_show = all_suggestions
+ 
     return render_template('search.html',
                            current_user=session['username'],
                            username=session.get('username'),
-                           results=results,
+                           results=books_to_show,
                            query=query)
 
 
@@ -246,7 +222,7 @@ def book_detail(category, title):
 
     meta = get_book_meta(title)
     cover_image = None
-    category_path = os.path.join(BOOKS_DIR, category)
+    category_path = os.path.join(BOOKS_CONTENT_DIR, category)#naay ilisan
     if os.path.exists(category_path):
         for filename in os.listdir(category_path):
             if os.path.splitext(filename)[0].title() == title:
@@ -329,13 +305,13 @@ def toggle_like(category, title):
     if username in likes[key]:
         likes[key].remove(username)
         liked = False
->>>>>>> 611d268 (Push)
+
     else:
 
-        books_to_show = all_suggestions
+        books_to_show = get_flat_recommendations
 
 
-    return render_template('search.html',user=user,books_to_show=books_to_show)
+    return render_template('search.html',user=username,books_to_show=books_to_show)
 
 
 @app.route('/logout')
@@ -344,13 +320,5 @@ def logout():
     flash('Logged out successfully!', 'info')
     return redirect(url_for('index'))
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 611d268bc6f46233a2e3c295b85d71d97c6cb6f2
-
->>>>>>> 611d268 (Push)
 if __name__ == '__main__':
     app.run(debug=True)
