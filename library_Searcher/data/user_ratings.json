@@ -1,26 +1,36 @@
 {
     "admin": {
-        "Architecture Form, Space, And Order": 5.0,
-        "Campbell Biology": 9.5,
-        "The Design Of Everyday Things": 6.0,
-        "Teach Like A Champion": 10.5,
-        "Atomic Habits": 9.5,
-        "101 Things I Learned In Architecture School": 17.0,
-        "Architectural Graphics": 1.0,
-        "Complexity": 2.0,
-        "Delirious New York": 1.0,
-        "S,M,L,Xl": 1.0,
-        "Space Planning Basics": 1.0,
-        "The Fountainhead": 1.0,
-        "Towards A New Architecture": 1.0,
-        "Deep Work": 1.0,
-        "Getting Things Done": 1.0,
-        "How To Read A Book": 1.0,
-        "Make It Stick": 1.0,
-        "The Craft Of Research": 1.0,
-        "The Elements Of Style": 1.0,
-        "Thinking In Bets": 1.0,
-        "Ultralearning": 1.0,
-        "Man'S Search For Meaning": 1.0
+        "ratings": {
+            "Architecture Form, Space, And Order": 7.0,
+            "Campbell Biology": 11.5,
+            "The Design Of Everyday Things": 10.0,
+            "Teach Like A Champion": 12.5,
+            "Atomic Habits": 11.5,
+            "101 Things I Learned In Architecture School": 35.5,
+            "Architectural Graphics": 1.0,
+            "Complexity": 8.0,
+            "Delirious New York": 1.0,
+            "S,M,L,Xl": 1.0,
+            "Space Planning Basics": 1.0,
+            "The Fountainhead": 1.0,
+            "Towards A New Architecture": 1.0,
+            "Deep Work": 1.0,
+            "Getting Things Done": 1.0,
+            "How To Read A Book": 1.0,
+            "Make It Stick": 1.0,
+            "The Craft Of Research": 1.0,
+            "The Elements Of Style": 1.0,
+            "Thinking In Bets": 1.0,
+            "Ultralearning": 1.0,
+            "Man'S Search For Meaning": 1.0
+        },
+        "recent_history": [
+            "Complexity",
+            "101 Things I Learned In Architecture School"
+        ],
+        "Complexity": 14.0,
+        "101 Things I Learned In Architecture School": 16.5,
+        "The Design Of Everyday Things": 7.0,
+        "Campbell Biology": 3.0
     }
 }

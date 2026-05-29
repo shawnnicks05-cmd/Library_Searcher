@@ -6,24 +6,34 @@
         
         <!-- Continue Reading Section (Placeholder Cards) -->
         <section class="book-row-section">
-            <h2>Continue Reading</h2>
-            <div class="book-slider">
-                <div class="book-card progress-card">
-                    <div class="book-cover cover-1"><span>Neuromancer</span></div>
-                    <div class="progress-container">
-                        <div class="progress-bar" style="width: 0%;"></div>
-                        <span class="progress-text">Not started yet</span>
-                    </div>
-                </div>
-                <div class="book-card progress-card">
-                    <div class="book-cover cover-2"><span>Foundation</span></div>
-                    <div class="progress-container">
-                        <div class="progress-bar" style="width: 0%;"></div>
-                        <span class="progress-text">Not started yet</span>
-                    </div>
-                </div>
+    <h2>🕒 Continue Reading</h2>
+    <div class="book-slider">
+        {% for book in recent_books %}
+        <div class="book-card progress-card" onclick="window.location.href=`{{ url_for('book_read', category=book.category, title=book.title) }}`">
+            
+            <div class="book-cover">
+                <img src="{{ url_for('static', filename='Book_Covers/' ~ book.category ~ '/' ~ book.title ~ '.png') }}" 
+                     alt="{{ book.title }}"
+                     onerror="this.parentElement.className='book-cover cover-3'; this.parentElement.innerHTML='<span style=\'padding:15px; text-align:center; color:#dfb15b; font-weight:bold; width:100%;\'>{{ book.title }}</span>';">
             </div>
-        </section>
+
+            <div class="book-title">{{ book.title }}</div>
+
+            <div class="progress-container" style="margin-top: auto; width: 100%;">
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 100%;"></div>
+                </div>
+                <span class="progress-text">Reading</span>
+            </div>
+
+        </div>
+        {% endfor %}
+        
+        {% if not recent_books %}
+        <p class="empty-text" style="padding: 20px 10px;">Your reading history is empty. Open a book to begin tracking!</p>
+        {% endif %}
+    </div>
+</section>
 
         <!-- Uncategorized AI Recommendations Slider Row -->
         <section class="book-row-section">
@@ -33,7 +43,7 @@
                 {% for book in recommendations %}
                     <div class="book-card">
                         <!-- Linked directly to your view_book routing function -->
-                        <a href="{{ url_for('book_read', category=book['category'], title=book['title']) }}">
+                        <a href="{{ url_for('book_detail', category=book['category'], title=book['title']) }}">
                             <div class="book-cover">
                                 <!-- Uses the category path embedded straight into the book item -->
                                 <img src="{{ url_for('static', filename='Book_Covers/' ~ book['category'] ~ '/' ~ book['cover_image']) }}" 

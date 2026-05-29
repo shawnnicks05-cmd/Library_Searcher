@@ -1,8 +1,10 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, session, jsonify
 import os
 import json
+
+import datetime
 # 🟢 Import the recommendation engine functions
-from recommender import track_activity, get_recommended_catalog,get_flat_recommendations,get_Books, get_user_scores
+from Logic import load_history, track_activity, load_user_scores,get_flat_recommendations,get_Books, get_user_scores
 
 app = Flask(__name__)
 app.secret_key = "Library_Secret_Key"
@@ -60,13 +62,40 @@ def dashboard():
     if 'username' not in session:
         return redirect(url_for('index'))
 
-    # 🟢 Swapped the static get_Books() for your recommended dynamic catalog sorter
-    book_catalog = get_flat_recommendations(session['username'])
-    return render_template('dashboard.html',
-                           current_user=session['username'],
-                           username=session.get('username'),
-                           recommendations=book_catalog)
+    user = session['username']
 
+    # 1. Load recommendations (Using the corrected dictionary loader)
+    book_catalog = get_flat_recommendations(user) 
+
+    # 2. Extract reading logs from history.json
+    history_data = load_history()
+    recent_titles = history_data.get(user, []) # e.g. ["Complexity", "101 Things..."]
+
+    # 3. Flatten your catalog dictionary data into a list for fast scanning
+    catalog_dict = get_Books() 
+    flat_catalog = []
+    for category, books in catalog_dict.items():
+        for b in books:
+            flat_catalog.append(b)
+
+    recent_books = []
+
+    # 4. Match historical titles to their category folders to load covers
+    for title in recent_titles:
+        clean_target = title.strip().lower()
+        for book in flat_catalog:
+            if book['title'].strip().lower() == clean_target:
+                recent_books.append({
+                    'title': book['title'],
+                    'category': book['category']
+                })
+                break
+
+    return render_template('dashboard.html',
+                           current_user=user,
+                           username=user,
+                           recommendations=book_catalog,   
+                           recent_books=recent_books)
 
 @app.route('/profile')
 def profile():
@@ -192,7 +221,7 @@ def book_read(category, title):
         return redirect(url_for('index'))
 
     # 🟢 Track book text file read activation action
-    track_activity(session['username'], title, "read")
+    track_activity(session['username'], book_title=title, action="read")
     
     # Find matching .txt file (case-insensitive)
     content = "No content available for this book yet."
