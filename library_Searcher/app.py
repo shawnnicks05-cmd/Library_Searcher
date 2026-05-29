@@ -42,7 +42,10 @@ def load_users() -> dict:
 
 
 
+<<<<<<< HEAD
 >>>>>>> 611d268 (Push)
+=======
+>>>>>>> 611d268bc6f46233a2e3c295b85d71d97c6cb6f2
 
 @app.route('/')
 def index():
@@ -343,7 +346,10 @@ def logout():
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 611d268bc6f46233a2e3c295b85d71d97c6cb6f2
 
 >>>>>>> 611d268 (Push)
 if __name__ == '__main__':
