@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library Searcher Template</title>
+    <title>Library Searcher</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -17,72 +17,40 @@
                         <i class="fa-solid fa-house"></i>
                     </a>
                 </div>
-                <span href="{{ url_for('dashboard') }}" class="home-btn" style="text-decoration: none;">Library Searcher</span>
+                <span class="home-btn">Library Searcher</span>
             </div>
-            
             <div class="nav-right">
-                <!-- THE FIX: Your form now wraps the input and handles submission to app.py -->
-             <form action="{{ url_for('search') }}" method="GET" class="search-container">
-    <input type="text" name="q" placeholder="Search books, genres..." class="search-input" value="{{ query or '' }}">
-    
-    <div class="search-dropdown">
-        <div class="dropdown-section">
-            <h4>Suggested For You</h4>
-            
-            <!-- CHANGES HERE: Changed to an empty box waiting for Python's data -->
-            <div id="dropdown-books-container" style="display: flex; flex-direction: column; gap: 10px; margin-top: 10px;">
-                <!-- Python will insert the images/titles here on click -->
-            </div>
-            
-        </div>
-        <div class="dropdown-section">
-            <h4>Recent Searches</h4>
-            <ul class="recent-list">
-                <li class="empty-text">No recent searches</li>
-            </ul>
-        </div>
-    </div>
-</form>
-
-<!-- ADD THIS SCRIPT DIRECTLY UNDER THE FORM -->
-<script>
-document.querySelector('.search-input').addEventListener('focus', function() {
-    const container = document.getElementById('dropdown-books-container');
-
-    // Automatically fetch the data from your Python API route
-    fetch('/api/suggested-books')
-        .then(response => response.json())
-        .then(bookTitles => {
-            if (bookTitles.length > 0) {
-                container.innerHTML = ''; // Clear out any old text
-                
-                // Build and display each book item visually
-                bookTitles.forEach(title => {
-                    const row = `
-                        <a href="/view_book/${encodeURIComponent(title)}" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; padding: 6px; border-radius: 4px; transition: background 0.2s;">
-                            <!-- Book icon box (since your JSON doesn't have cover image paths) -->
-                            <div style="width: 35px; height: 48px; background: #333; border-radius: 4px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
-                                <i class="fa-solid fa-book" style="color: #888; font-size: 16px;"></i>
+                <div class="search-container">
+                    <input type="text"
+                           id="searchInput"
+                           placeholder="Search books, categories..."
+                           class="search-input"
+                           autocomplete="off">
+                    <div class="search-dropdown" id="searchDropdown" style="display:none;">
+                        <div class="dropdown-section">
+                            <h4>Suggested For You</h4>
+                            <div class="genre-tags">
+                                <span class="tag" onclick="doSearch('Fantasy')">Fantasy</span>
+                                <span class="tag" onclick="doSearch('Fiction')">Fiction</span>
+                                <span class="tag" onclick="doSearch('Sci-Fi')">Sci-Fi</span>
                             </div>
-                            <!-- Book Title Text -->
-                            <div style="overflow: hidden; text-align: left;">
-                                <p style="margin: 0; font-size: 13px; font-weight: bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #fff;">
-                                    ${title}
-                                </p>
-                            </div>
-                        </a>
-                    `;
-                    container.insertAdjacentHTML('beforeend', row);
-                });
-            }
-        });
-});
-</script>
-
+                        </div>
+                        <div class="dropdown-section" id="liveSuggestions" style="display:none;">
+                            <h4>Suggestions</h4>
+                            <ul class="recent-list" id="suggestionsList"></ul>
+                        </div>
+                        <div class="dropdown-section">
+                            <h4>Recent Searches</h4>
+                            <ul class="recent-list" id="recentList">
+                                <li class="empty-text">No recent searches</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
                 <a href="{{ url_for('profile') }}" class="profile-link">
                     <div class="profile-container">
                         <i class="fa-solid fa-circle-user profile-icon"></i>
-                        <div class="username">{{ user }}</div>
+                        <div class="username">{{ username }}</div>
                     </div>
                 </a>
             </div>
@@ -92,6 +60,80 @@ document.querySelector('.search-input').addEventListener('focus', function() {
             {% block content %}{% endblock %}
         </div>
     </div>
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const dropdown = document.getElementById('searchDropdown');
+        const suggestionsList = document.getElementById('suggestionsList');
+        const liveSuggestions = document.getElementById('liveSuggestions');
+        const recentList = document.getElementById('recentList');
+
+        let debounceTimer;
+
+        searchInput.addEventListener('focus', () => {
+            dropdown.style.display = 'block';
+            loadRecentSearches();
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.search-container')) {
+                dropdown.style.display = 'none';
+            }
+        });
+
+        searchInput.addEventListener('input', () => {
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(() => fetchSuggestions(searchInput.value), 250);
+        });
+
+        searchInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') doSearch(searchInput.value);
+        });
+
+        function doSearch(query) {
+            if (query.trim()) {
+                window.location.href = `/search?q=${encodeURIComponent(query.trim())}`;
+            }
+        }
+
+        async function fetchSuggestions(query) {
+            if (query.length < 2) {
+                liveSuggestions.style.display = 'none';
+                return;
+            }
+            const res = await fetch(`/api/search-suggestions?q=${encodeURIComponent(query)}`);
+            const data = await res.json();
+
+            suggestionsList.innerHTML = '';
+            const allSuggestions = [
+                ...data.books.map(b => ({ label: `📖 ${b}`, value: b })),
+                ...data.categories.map(c => ({ label: `🏷️ ${c}`, value: c })),
+            ];
+
+            if (allSuggestions.length) {
+                allSuggestions.forEach(({ label, value }) => {
+                    const li = document.createElement('li');
+                    li.textContent = label;
+                    li.style.cursor = 'pointer';
+                    li.onclick = () => doSearch(value);
+                    suggestionsList.appendChild(li);
+                });
+                liveSuggestions.style.display = 'block';
+            } else {
+                liveSuggestions.style.display = 'none';
+            }
+        }
+
+        async function loadRecentSearches() {
+            const res = await fetch('/api/recent-searches');
+            const recent = await res.json();
+            if (recent.length) {
+                recentList.innerHTML = recent
+                    .map(q => `<li style="cursor:pointer" onclick="doSearch('${q}')">${q}</li>`)
+                    .join('');
+            }
+        }
+    </script>
 
 </body>
 </html>
