@@ -38,7 +38,7 @@ def get_Books():
     return catalog
 
 
-# ─── Routes ───────────────────────────────────────────────────────────────────
+
 
 @app.route('/')
 def index():
@@ -205,7 +205,6 @@ def book_read(category, title):
     if 'username' not in session:
         return redirect(url_for('index'))
 
-    # Find matching .txt file (case-insensitive)
     content = "No content available for this book yet."
     content_category_path = os.path.join(BOOKS_CONTENT_DIR, category)
 
@@ -277,7 +276,6 @@ def logout():
     return redirect(url_for('index'))
 
 
-# ──────────────────────────────────────────────────────────────────────────────
 
 if __name__ == '__main__':
     app.run(debug=True)
