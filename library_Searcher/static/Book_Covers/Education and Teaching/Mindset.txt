@@ -1,0 +1,13 @@
+Book Title : Mindset: The New Psychology of Success
+
+Description : Defines the foundational difference between a fixed mindset and a growth mindset, showing how this core belief dictates achievement, resilience, and success in learning environments.
+
+Date : 2006
+
+Author : Carol S. Dweck
+
+Category : Educational Psychology
+
+Book id : EDUTEA005
+
+Book Shelf id: D004

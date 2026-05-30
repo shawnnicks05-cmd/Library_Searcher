@@ -1,0 +1,14 @@
+Book Title : Thermodynamics: An Engineering Approach
+
+Description : Introduces classical thermodynamics, covering energy balance, mass flow conservation, and the fundamental laws governing energy conversions.
+
+Date : 1989
+
+Author : Yunus A. Çengel & Michael A. Boles
+
+Category : Thermal Engineering / Thermodynamics
+
+Book id : ENG008
+
+
+Book Shelf id: F208

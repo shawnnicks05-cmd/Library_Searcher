@@ -1,0 +1,13 @@
+Book Title : The C Programming Language
+
+Description : The C Programming Language is a foundational computer science book written by Brian Kernighan and Dennis Ritchie. First published in 1978, it serves as both the original language specification and a practical tutorial on C. Widely known as “K&R,” it remains one of the most influential programming texts ever produced.
+
+Date : February 22,1978
+
+Author : Brian W. Kernighan and Dennis M. Ritchie
+
+Category : Programming
+
+Book id : CS003
+
+Book Shelf id: C142

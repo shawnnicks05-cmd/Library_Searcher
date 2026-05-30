@@ -1,0 +1,14 @@
+Book Title :The Elements of Style
+
+Description : Universally known as the writer's "little book," this is one of the most influential manuals on English style and usage ever published. Originally composed by William Strunk Jr. in 1918 for his college courses, it was later revised and expanded by his former student, the legendary essayist E.B. White.
+
+Date : 2000
+
+Author : William Strunk Jr., E.B. White
+
+Category : Language Arts / Composition / Creative Writing & Style
+
+Book id : GEN-RES002
+
+Book Shelf id: G301
+

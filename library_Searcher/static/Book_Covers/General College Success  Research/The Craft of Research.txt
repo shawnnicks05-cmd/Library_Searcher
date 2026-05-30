@@ -1,0 +1,13 @@
+Book Title : The Craft of Research
+
+Description : Widely recognized as one of the most successful and influential guides to research methodology ever written. The text demystifies the research process, treating it not as a solitary, mechanical chore, but as a dynamic, deeply social act of communication between researchers and an imagined community of readers.
+
+Date : 2016
+
+Author : Wayne C. Booth, Gregory G. Colomb, Joseph M. Williams (with updates by Joseph Bizup and William T. FitzGerald)
+
+Category : Research Methodology / Academic Writing / Rhetoric
+
+Book id :GEN-RES003
+
+Book Shelf id: G302

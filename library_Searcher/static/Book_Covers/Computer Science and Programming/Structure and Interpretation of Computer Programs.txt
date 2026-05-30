@@ -1,0 +1,14 @@
+Book Title : Structure and Interpretation of Computer Programs
+
+Description : A foundational textbook using Scheme to teach essential computer programming concepts like abstraction, recursion, and interpreter design.
+
+Date : 1984
+
+Author : Harold Abelson & Gerald Jay Sussman
+
+Category : Programming Theory
+
+Book id : CS006
+
+Book Shelf id: C145
+

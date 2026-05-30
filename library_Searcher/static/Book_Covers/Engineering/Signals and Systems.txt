@@ -1,0 +1,15 @@
+Book Title : Signals and Systems
+
+Description : A comprehensive study of continuous-time and discrete-time signals, linear time-invariant (LTI) systems, and transform methods like Fourier and Laplace.
+
+Date : 1983
+
+Author : Alan V. Oppenheim, Alan S. Willsky, & S. Hamid Nawab
+
+Category : Electrical Engineering / Signals
+
+Book id : ENG006
+
+
+Book Shelf id: F206
+

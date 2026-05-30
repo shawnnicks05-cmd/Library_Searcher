@@ -1,0 +1,14 @@
+Book Title : Digital Design
+
+Description : An introductory standard for computer engineering, electrical engineering, and computer science students. This book bridges the gap between abstract mathematical logic and physical hardware implementation.
+
+Date : January 1, 1984
+
+Author : M. Morris Mano, Michael D. Ciletti
+
+Category : Engineering
+
+Book id : ENG002
+
+
+Book Shelf id: F201

@@ -1,0 +1,13 @@
+Book Title : Zero to One: Notes on Startups, or How to Build the Future
+
+Description : Outlines philosophies on building monopolies through unique, vertical breakthroughs instead of expanding existing horizontal concepts.
+
+Date : 2014
+
+Author : Peter Thiel & Blake Masters
+
+Category : Startup Strategy
+
+Book id : BE005
+
+Book Shelf id : E134

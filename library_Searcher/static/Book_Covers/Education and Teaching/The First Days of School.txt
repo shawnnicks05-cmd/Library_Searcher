@@ -1,0 +1,13 @@
+Book Title : The First Days of School: How to Be an Effective Teacher
+
+Description : A highly practical handbook focused entirely on structural classroom management, layout design, and establishing clear behavioral routines from the very first day of class.
+
+Date : 1991
+
+Author : Harry K. Wong & Rosemary T. Wong
+
+Category : Classroom Management
+
+Book id : EDUTEA007
+
+Book Shelf id: D006

@@ -1,0 +1,14 @@
+Book Title : Atomic Habits
+
+Description : Description: One of the most influential personal development and behavioral psychology books of the modern era. James Clear argues that true transformation does not come from massive, overnight changes or setting lofty goals, but from the compounding effect of hundreds of small decisions—"atomic habits."
+
+Date : October 16, 2018
+
+Author : James Clear
+
+Category : Behavioral Psychology / Self-Help / Personal Productivity
+
+Book id : GEN-RES004
+
+Book Shelf id: G303
+

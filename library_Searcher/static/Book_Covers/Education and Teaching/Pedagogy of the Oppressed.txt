@@ -1,0 +1,13 @@
+Book Title : Pedagogy of the Oppressed
+
+Description : A seminal text in philosophy, sociology, and education theory. Freire, drawing on his extensive work teaching illiterate adults in Brazil, critiques traditional educational institutions as instruments of social control and oppression.
+
+Date : 1968
+
+Author : Paulo Freire
+
+Category : Education Theory / Critical Pedagogy / Social Philosophy
+
+Book id : EDUTEA001
+
+Book Shelf id: D000

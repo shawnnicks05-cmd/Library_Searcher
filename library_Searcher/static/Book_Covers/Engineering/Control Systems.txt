@@ -1,0 +1,14 @@
+Book Title : Control Systems Engineering
+
+Description : Explores the analysis and design of feedback control systems using classical transfer function approaches and state-space models.
+
+Date : 1993
+
+Author : Norman S. Nise
+
+Category : Control Systems Engineering
+
+Book id : ENG007
+
+
+Book Shelf id: F207

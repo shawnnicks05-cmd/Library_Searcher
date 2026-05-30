@@ -1,0 +1,13 @@
+Book Title : Refactoring: Improving the Design of Existing Code
+
+Description : Focuses on the systematic process of rewriting code to improve internal structure and readability without altering external behavior.
+
+Date : 1999
+
+Author : Martin Fowler
+
+Category : Code Improvement
+
+Book id : CS009
+
+Book Shelf id: C148

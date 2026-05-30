@@ -1,0 +1,13 @@
+Book Title : The Selfish Gene
+
+Description : Introduces the gene-centric view of natural selection, famously arguing that organisms are "survival machines" built to propagate replicating genetic material.
+
+Date : 1976
+
+Author : Richard Dawkins
+
+Category : Evolutionary Biology / Popular Science
+
+Book id : BIOSCI006
+
+Book Shelf id : B108

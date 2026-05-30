@@ -1,0 +1,13 @@
+Book Title : Molecular Biology of the Cell (Sixth Edition)
+
+Description :Widely considered the definitive "bible" of cell biology, this textbook provides a comprehensive, deeply detailed exploration of cell structure, function, and genomic regulation. It bridges the gap between abstract biochemical pathways and macro-level cellular behaviors, making it an indispensable resource for advanced undergraduates, graduate students, and researchers in biomedical sciences.
+
+Date : November 18, 2014
+
+Author : Bruce Alberts, Alexander Johnson, Julian Lewis, David Morgan, Martin Raff, Keith Roberts, Peter Walter
+
+Category : Biology / Molecular and Cell Biology
+
+Book id : BIOSCI002
+
+Book Shelf id : B102

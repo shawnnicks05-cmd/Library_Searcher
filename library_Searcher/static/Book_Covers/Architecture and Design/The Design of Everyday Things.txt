@@ -1,0 +1,13 @@
+Book Title : The Design of Everyday Things
+
+Description : The seminal guide to human-centered design (HCD). Don Norman, a cognitive scientist, explores why everyday objects—from complex software to simple doors and refrigerators—frequently frustrate users. He argues that when people struggle to use an object, the fault lies in its poor design, not the user's intelligence. The book bridges cognitive psychology with physical engineering to establish foundational usability concepts like affordances, signifiers, mapping, feedback, and the conceptual models required to make products intuitive.
+
+Date : 2013
+
+Author : Don Norman
+
+Category : Industrial Design / Human-Computer Interaction (HCI) / User Experience (UX)
+
+Book id : ARCDES002
+
+Book shelf id : A125

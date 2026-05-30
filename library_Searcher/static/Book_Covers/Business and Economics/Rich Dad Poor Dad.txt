@@ -1,0 +1,13 @@
+Book Title : Rich Dad Poor Dad:
+
+Description : A foundational personal finance book that challenges common myths about wealth. Written in an anecdotal style, it contrasts the mindsets of two father figures in the author's life: his biological father (a highly educated but financially struggling government worker) and his best friend's father (a self-made millionaire and entrepreneur). The book advocates for financial literacy, financial independence, and building wealth by investing in assets rather than liabilities.
+
+Date : April 1, 1997 (Original publication)
+
+Author : Robert T. Kiyosaki (with Sharon L. Lechter, C.P.A.)
+
+Category : Personal Finance / Business & Economics
+
+Book id : BE001
+
+Book Shelf id : E130

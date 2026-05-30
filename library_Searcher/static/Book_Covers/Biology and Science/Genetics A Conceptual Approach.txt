@@ -1,0 +1,13 @@
+Book Title : Genetics: A Conceptual Approach
+
+Description : Focuses on helping students grasp major genetic concepts, mapping out transmission genetics, molecular mechanisms, and population analytics.
+
+Date : 2002
+
+Author : Benjamin A. Pierce
+
+Category : Genetics
+
+Book id : BIOSCI008
+
+Book Shelf id : B103

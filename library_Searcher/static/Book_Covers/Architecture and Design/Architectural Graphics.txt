@@ -1,0 +1,13 @@
+Book Title : Architectural Graphics
+
+Description : The definitive instructional manual on traditional drawing procedures, explaining perspective projections, structural shading, section cuts, orthographic plans, and architectural standards.
+
+Date : 1975
+
+Author : Francis D.K. Ching
+
+Category : Design Presentation / Drafting
+
+Book id : ARCDES009
+
+Book shelf id : A121

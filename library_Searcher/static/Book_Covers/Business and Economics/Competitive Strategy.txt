@@ -1,0 +1,13 @@
+Book Title : Competitive Strategy: Techniques for Analyzing Industries and Competitors
+
+Description : Introduces the iconic Five Forces framework to analyze market competition, positioning, and generic strategic advantages.
+
+Date : 1980
+
+Author : Michael E. Porter
+
+Category : Strategic Management / Industrial Economics
+
+Book id : BE010
+
+Book Shelf id : E139

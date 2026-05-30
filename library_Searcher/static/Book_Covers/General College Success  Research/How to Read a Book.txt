@@ -1,0 +1,13 @@
+Book Title : How to Read a Book
+
+Description : A foundational masterwork in education and literacy. Adler and Van Doren argue that reading is not a passive, spectator sport, but an active, demanding art.
+
+Date : 1972
+
+Author : Mortimer J. Adler, Charles Van Doren
+
+Category : Education / Literature / Self-Help & Study Skills
+
+Book id : GEN-RES001
+
+Book Shelf id: G300

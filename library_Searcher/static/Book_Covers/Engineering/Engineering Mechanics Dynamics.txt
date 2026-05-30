@@ -1,0 +1,15 @@
+Book Title : Engineering Mechanics: Dynamics
+
+Description : This textbook is a staple in undergraduate mechanical, aerospace, and civil engineering curricula. It provides a clear and thorough presentation of the theory and application of engineering mechanics, specifically focusing on how bodies move when subjected to forces.
+
+
+Date : January 1, 1974
+
+Author : R.C. Hibbeler
+
+Category : Engineering
+
+Book id : ENG001
+
+
+Book Shelf id: F200

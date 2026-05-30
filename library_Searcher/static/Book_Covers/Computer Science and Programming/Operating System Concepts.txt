@@ -1,0 +1,14 @@
+Book Title : Operating System Concepts
+
+Description : A core academic textbook breaking down processes, memory management, storage structures, threads, and distributed operating architectures.
+
+Date : 1983
+
+Author : Abraham Silberschatz, Peter B. Galvin, & Greg Gagne
+
+Category : Operating Systems
+
+Book id : CS007
+
+Book Shelf id: C146
+

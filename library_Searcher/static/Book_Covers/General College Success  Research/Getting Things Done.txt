@@ -1,0 +1,14 @@
+Book Title : Getting Things Done: The Art of Stress-Free Productivity
+
+Description : Outlines a popular time-management and personal productivity system built on capturing, processing, and organizing tasks into an external, reliable tracking repository to free up cognitive load.
+
+Date : 2001
+
+Author : David Allen
+
+Category : Time Management / Productivity
+
+Book id :GEN-RES007
+
+Book Shelf id: G306
+

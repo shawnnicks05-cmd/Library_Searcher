@@ -1,0 +1,13 @@
+Book Title : Blue Ocean Strategy
+
+Description : A highly influential business strategy book based on a study of 150 strategic moves spanning more than a hundred years and thirty industries. The book argues that brutal, head-to-head competition results in nothing but a bloody "red ocean" of rivals fighting over a shrinking profit pool. Instead, it introduces analytical frameworks and tools for companies to create a "blue ocean"—entirely new, uncontested market spaces that render competitors irrelevant by unlocking new demand.
+
+Date : February 2005
+
+Author : W. Chan Kim, Renée Mauborgne
+
+Category : Business Strategy / Innovation / Entrepreneurship
+ 
+Book id : BE004
+
+Book Shelf id : E133

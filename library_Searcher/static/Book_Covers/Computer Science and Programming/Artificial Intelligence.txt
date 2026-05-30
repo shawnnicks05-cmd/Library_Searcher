@@ -1,0 +1,13 @@
+Book Title : Artificial Intelligence: A Modern Approach
+
+Description : Artificial Intelligence: A Modern Approach (often abbreviated AIMA) is a comprehensive textbook on artificial intelligence by Stuart Russell and Peter Norvig. First published in 1995, it has become the standard academic reference and teaching text in AI worldwide, widely adopted in universities and cited across research disciplines.
+
+Date : April 14, 1995
+
+Author : Stuart Russell and Peter Norvig
+
+Category : AI
+
+Book id : CS004
+
+Book Shelf id: C143

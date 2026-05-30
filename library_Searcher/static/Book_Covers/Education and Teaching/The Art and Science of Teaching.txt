@@ -1,0 +1,14 @@
+
+Book Title : The Art and Science of Teaching: A Comprehensive Framework for Effective Instruction
+
+Description : Establishes a rigorous pedagogical model balancing data-driven instructional design with the fluid classroom management choices required to maintain student engagement.
+
+Date : 2007
+
+Author : Robert J. Marzano
+
+Category : Classroom Pedagogy
+
+Book id : EDUTEA010
+
+Book Shelf id: D009

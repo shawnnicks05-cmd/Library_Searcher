@@ -1,0 +1,13 @@
+Book Title : Evolutionary Biology
+
+Description : A definitive, comprehensive framework detailing the foundational patterns of natural selection, genomic evolution, speciation, and macroevolutionary history.
+
+Date : 1978
+
+Author : Douglas J. Futuyma
+
+Category : Evolutionary Biology
+
+Book id : BIOSCI009
+
+Book Shelf id : B110

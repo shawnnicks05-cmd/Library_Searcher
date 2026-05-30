@@ -1,0 +1,14 @@
+Book Title : Electric Machinery Fundamentals
+
+Description : Focuses on magnetic circuits, transformers, and the primary structural types of AC/DC electric motors and generators.
+
+Date : 1985
+
+Author : Stephen J. Chapman
+
+Category : Power Engineering / Electric Machinery
+
+Book id : ENG010
+
+
+Book Shelf id: F210

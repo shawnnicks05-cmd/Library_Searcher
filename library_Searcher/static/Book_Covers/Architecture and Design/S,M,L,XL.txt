@@ -1,0 +1,14 @@
+Book Title : S,M,L,XL
+
+Description : A massive, eclectic text combining architectural essays, travel manifestos, diary segments, graphic design layouts, and urban scale reviews to analyze contemporary structural environments.
+
+Date : 1995
+
+Author : Rem Koolhaas & Bruce Mau
+
+Category : Urbanism & Contemporary Design
+
+Book id : ARCDES006
+
+Book shelf id : A126
+

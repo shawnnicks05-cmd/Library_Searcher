@@ -1,0 +1,14 @@
+Book Title : Deep Work
+
+Description : A groundbreaking book on modern productivity, cognitive psychology, and workplace economics.
+
+Date : January 5, 2016
+
+Author : Cal Newport
+
+Category : Productivity / Behavioral Psychology / Career Development
+
+Book id :GEN-RES005
+
+Book Shelf id: G304
+

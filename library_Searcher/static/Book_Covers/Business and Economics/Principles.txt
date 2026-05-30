@@ -1,0 +1,13 @@
+Book Title : Principles
+
+Description : An interactive companion workbook designed to help readers operationalize the philosophies found in the author's primary text, Principles. Instead of merely reading about success strategies, this journal provides open-ended prompts, structured thought exercises, and frameworks to guide individuals in reflecting on their own experiences, diagnosing mistakes, and creating a personalized set of rules for decision-making in life, career, and relationships.
+
+Date : November 17, 2020
+
+Author : Ray Dalio
+
+Category : Self-Help / Personal Productivity / Leadership
+
+Book id : BE003
+
+Book Shelf id : E132

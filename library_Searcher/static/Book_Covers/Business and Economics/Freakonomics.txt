@@ -1,0 +1,14 @@
+Book Title : Freakonomics: A Rogue Economist Explores the Hidden Side of Everything
+
+Description : Applies economic analysis and data tracking to unusual real-world scenarios, revealing hidden incentives.
+
+Date : 2005
+
+Author : Steven D. Levitt & Stephen J. Dubner
+
+Category : Popular Economics
+
+Book id : BE009
+
+Book Shelf id : E138
+

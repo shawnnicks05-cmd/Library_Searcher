@@ -1,0 +1,13 @@
+Book Title : Clean Code
+
+Description : Clean Code: A Handbook of Agile Software Craftsmanship is a 2008 software engineering book by Robert C. Martin, a prominent figure in the agile development movement. It provides guidance on writing code that is readable, maintainable, and efficient, influencing programming best practices across industries and languages.
+
+Date : August 1, 2008
+
+Author : Robert C. Martin
+
+Category : Software Engineering
+
+Book id : CS001
+
+Book Shelf id: C140

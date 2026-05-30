@@ -1,0 +1,13 @@
+Book Title : Visible Learning: A Synthesis of Over 800 Meta-Analyses Relating to Achievement
+
+Description : A massive data-driven synthesis ranking the statistical effect sizes of various educational interventions, teaching strategies, and environmental factors on student achievement.
+
+Date : 2008
+
+Author : John Hattie
+
+Category : Evidence-Based Education
+
+Book id : EDUTEA006
+
+Book Shelf id: D005

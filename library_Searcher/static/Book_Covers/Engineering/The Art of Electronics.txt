@@ -1,0 +1,14 @@
+Book Title : The Art of Electronics
+
+Description : Often referred to as the "bible" of circuit design, this book is unique because it is written by practitioners for practitioners. Unlike heavily academic textbooks that rely on dense mathematical proofs, this text focuses on intuitive, practical circuit design and troubleshooting.
+
+Date : October 31, 1980
+
+Author : Paul Horowitz, Winfield Hill
+
+Category : Electronics
+
+Book id : ENG003
+
+
+Book Shelf id: F202

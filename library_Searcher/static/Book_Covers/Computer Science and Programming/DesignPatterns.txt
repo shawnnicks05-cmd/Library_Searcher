@@ -1,0 +1,14 @@
+Book Title : Design Patterns: Elements of Reusable Object-Oriented Software
+
+Description : The definitive blueprint text that established standard solutions to common design challenges in object-oriented software engineering.
+
+Date : 1994
+
+Author : Erich Gamma, Richard Helm, Ralph Johnson, & John Vlissides
+
+Category : Software Architecture
+
+Book id : CS005
+
+Book Shelf id: C144
+

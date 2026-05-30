@@ -1,0 +1,13 @@
+Book Title : Brief Answers to the Big Questions
+
+Description : One of the most acclaimed popular science books in history. Written by theoretical physicist Stephen Hawking, the text aims to explain complex cosmological concepts—such as the nature of space and time, the fabric of the expanding universe, black holes, and quantum mechanics—to non-specialist readers without using dense mathematical equations. It seeks to reconcile classical general relativity with modern quantum theory, exploring the ultimate quest for a unified "Theory of Everything."
+
+Date : 1988
+
+Author : Stephen Hawking
+
+Category : Physics / Cosmology / Popular Science
+
+Book id : BIOSCI004
+
+Book Shelf id : B101

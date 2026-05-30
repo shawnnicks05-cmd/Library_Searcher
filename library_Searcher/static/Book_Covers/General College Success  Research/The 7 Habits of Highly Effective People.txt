@@ -1,0 +1,13 @@
+Book Title : The 7 Habits of Highly Effective People
+
+Description : Provides a holistic, integrated, principle-centered approach to personal development and professional growth, mapping habits that guide individuals from dependence to independence and eventual interdependence.
+
+Date : 1989
+
+Author : Stephen R. Covey
+
+Category : Personal Development / Leadership
+
+Book id : GEN-RES008
+
+Book Shelf id: G307

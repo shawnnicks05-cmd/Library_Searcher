@@ -1,0 +1,13 @@
+Book Title : The Fountainhead
+
+Description : A philosophical novel outlining the professional journey of an uncompromising, visionary modernist architect battling against unoriginal cultural institutions.
+
+Date : 1943
+
+Author : Ayn Rand
+
+Category : Fiction / Design Philosophy
+
+Book id : ARC010
+
+Book shelf id : A122

@@ -1,0 +1,14 @@
+Book Title : Microelectronic Circuits
+
+Description : The definitive guide to analog and digital microelectronics, including diodes, transistors (MOSFETs/BJTs), amplifiers, and integrated circuits.
+
+Date : 1982
+
+Author : Adel S. Sedra & Kenneth C. Smith
+
+Category : Electrical Engineering / Electronics
+
+Book id : ENG009
+
+
+Book Shelf id: F209

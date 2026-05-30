@@ -1,0 +1,13 @@
+Book Title : What the Best College Teachers Do
+
+Description : A comprehensive study examining the underlying principles, attitudes, course designs, and evaluation methods used by exceptionally successful university professors.
+
+Date : 2004
+
+Author : Ken Bain
+
+Category : Higher Education Instructional Theory
+
+Book id : EDU009
+
+Book Shelf id: D008

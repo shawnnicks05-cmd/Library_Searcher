@@ -1,0 +1,14 @@
+Book Title : Architecture: Form, Space, and Order (Fourth Edition)
+
+Description : The definitive classic introduction to the basic vocabulary of architectural design. This heavily illustrated text examines the essential relationships between the structural elements of architecture, looking at how form and space are organized in the built environment. It spans cultures and historical periods, showing how abstract design principles translate into physical, lived realities.
+
+Date : September 22, 2014
+
+Author : Francis D. K. Ching
+
+Category : Architecture / Design Theory / Spatial Aesthetics
+
+Book id : ARCDES001
+
+Book shelf id : A120
+

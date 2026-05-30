@@ -1,0 +1,14 @@
+Book Title : Make It Stick
+
+Description : A groundbreaking synthesis of cognitive psychology and educational research that completely upends traditional notions of studying.
+
+Date : April 14, 2014
+
+Author : Peter C. Brown, Henry L. Roediger III, Mark A. McDaniel
+
+Category : Educational Psychology / Cognitive Science / Learning Methods
+
+Book id : GEN-RES006
+
+Book Shelf id: G305
+

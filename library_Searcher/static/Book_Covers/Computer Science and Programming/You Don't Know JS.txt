@@ -1,0 +1,13 @@
+Book Title : You Don't Know JS
+
+Description : A deep-dive exploration into the core mechanisms of JavaScript, tackling scopes, closures, object prototypes, and asynchronous patterns.
+
+Date : 2014 (First Edition) / 2020 (Second Edition)
+
+Author : Kyle Simpson
+
+Category : JavaScript Deep Dive
+
+Book id : CS010
+
+Book Shelf id: C149

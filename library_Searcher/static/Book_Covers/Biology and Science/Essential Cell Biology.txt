@@ -1,0 +1,13 @@
+Book Title : Essential Cell Biology
+
+Description : An accessible, highly visual introduction to the core concepts of cellular mechanics, molecular biology, and basic genetics.
+
+Date : 1997
+
+Author : Bruce Alberts, Dennis Bray, Karen Hopkin, & Alexander Johnson
+
+Category : Molecular & Cell Biology
+
+Book id : BIOSCI005
+
+Book Shelf id : B106

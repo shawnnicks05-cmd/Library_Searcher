@@ -1,0 +1,14 @@
+Book Title : Complexity and Contradiction in Architecture
+
+Description : A landmark text challenging modernist minimalism, arguing instead for historical contextualization, hybridity, nuance, and structural visual tension.
+
+Date : 1966
+
+Author : Robert Venturi
+
+Category : Architectural Theory / Postmodernism
+
+Book id : ARCDES005
+
+Book shelf id : A124
+

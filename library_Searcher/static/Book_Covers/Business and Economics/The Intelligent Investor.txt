@@ -1,0 +1,13 @@
+Book Title : The Intelligent Investor
+
+Description : Widely considered the "bible" of investing, this seminal text outlines the principles of "value investing"—an investment approach centered on analyzing a company’s fundamental value and buying its stock only when there is a significant safety margin. Rather than chasing market trends, speculation, or short-term trading patterns, the book teaches emotional discipline, long-term thinking, and a realistic understanding of market psychology.
+
+Date : 1949
+
+Author : Benjamin Graham
+
+Category : Finance / Investing
+
+Book id : BE002
+
+Book Shelf id : E131

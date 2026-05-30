@@ -1,0 +1,14 @@
+Book Title : Introduction to Algorithms
+
+Description : Introduction to Algorithms, often abbreviated as CLRS after its authors — Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein — is a comprehensive textbook on algorithm design and analysis. Published by The MIT Press, it is regarded as one of the most influential and widely used texts in computer science education worldwide. 
+
+Date : 1990
+
+Author : Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein
+
+Category : Computer Science
+
+Book id : CS002
+
+Book Shelf id: C141
+

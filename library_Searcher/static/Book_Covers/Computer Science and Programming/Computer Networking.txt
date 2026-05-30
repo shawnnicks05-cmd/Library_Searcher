@@ -1,0 +1,13 @@
+Book Title : Computer Networking: A Top-Down Approach
+
+Description : Explores networking mechanisms starting directly from the application layer down to the physical media layer.
+
+Date : 2000
+
+Author : James F. Kurose & Keith W. Ross
+
+Category : Networking
+
+Book id : CS008
+
+Book Shelf id: C147

@@ -1,0 +1,14 @@
+Book Title : Fundamentals of Electric Circuits
+
+Description : Designed for the introductory three-semester or sophomore-level circuit analysis course, this textbook is widely praised for making introductory linear circuit analysis accessible and engaging.
+
+Date : January 1, 2000
+
+Author : Charles K. Alexander, Matthew N.O. Sadiku
+
+Category : Electrical Engineering
+
+Book id : ENG004
+
+
+Book Shelf id: F203

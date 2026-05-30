@@ -1,0 +1,13 @@
+Book Title : The Hard Thing About Hard Things: Building a Business When There Are No Easy Answers
+
+Description : Practical guidance on managing startups through extreme crises, building team psychology, and handling firing or structural failure.
+
+Date : 2014
+
+Author : Ben Horowitz
+
+Category : Entrepreneurship / Execution
+
+Book id : BE008
+
+Book Shelf id : E137

@@ -1,0 +1,13 @@
+Book Title : How Children Learn
+
+Description : A seminal text in progressive education and child psychology. John Holt argues that children are natural, inherently motivated learners who possess a profound capacity to explore, make sense of, and master the world around them.
+
+Date : 1967
+
+Author : John Holt
+
+Category : Education Theory / Child Development / Educational Psychology
+
+Book id : EDUTEA002
+
+Book Shelf id: D001

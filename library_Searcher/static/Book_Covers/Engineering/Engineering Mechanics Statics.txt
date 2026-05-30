@@ -1,0 +1,14 @@
+Book Title : Engineering Mechanics Statics
+
+Description : Covers the fundamental analysis of rigid bodies in static equilibrium, addressing force systems, trusses, frames, and friction.
+
+Date : 1951
+
+Author : J.L. Meriam & L.G. Kraige
+
+Category : Mechanical Engineering / Statics
+
+Book id : ENG005
+
+
+Book Shelf id: F205

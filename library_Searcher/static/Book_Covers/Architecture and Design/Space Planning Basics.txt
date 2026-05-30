@@ -1,0 +1,13 @@
+Book Title : Space Planning Basics
+
+Description : A clear, highly functional workbook detailing standard blueprint drafting techniques, structural bubble layouts, room circulation patterns, and functional programmatic zoning.
+
+Date : 1992
+
+Author : Mark Karlen, Rob Fleming, & Joan Coupe
+
+Category : Interior Design / Spatial Planning
+
+Book id : ARCDES008
+
+Book shelf id : A129

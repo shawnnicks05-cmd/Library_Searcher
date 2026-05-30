@@ -1,0 +1,13 @@
+Book Title : Lehninger Principles of Biochemistry
+
+Description : The premier textbook for biochemical education, delivering meticulous breakdowns of cellular bioenergetics, metabolic signaling networks, and molecular architectures.
+
+Date : 1970
+
+Author : David L. Nelson & Michael M. Cox
+
+Category : Biochemistry / Cellular Metabolism
+
+Book id : BIOSCI010
+
+Book Shelf id : B104

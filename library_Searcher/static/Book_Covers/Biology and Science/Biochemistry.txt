@@ -1,0 +1,13 @@
+Book Title : Biochemistry
+
+Description : A premier academic resource breaking down molecular structures, enzyme kinetics, and metabolic pathways on a detailed chemical level.
+
+Date : 1970
+
+Author : Lubert Stryer, Jeremy M. Berg, & John L. Tymoczko
+
+Category : Biochemistry
+
+Book id : BIOSCI007
+
+Book Shelf id : B109

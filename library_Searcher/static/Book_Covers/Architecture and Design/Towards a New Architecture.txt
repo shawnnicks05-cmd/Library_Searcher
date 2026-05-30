@@ -1,0 +1,13 @@
+Book Title : Towards a New Architecture
+
+Description : One of the most influential and controversial architectural manifestos of the 20th century. Le Corbusier passionately argues against the decorative, historical revival styles of the 19th century (like the Beaux-Arts tradition), urging architects to embrace the clean, functional aesthetic of the industrial age. Famously declaring that "a house is a machine for living in," he points to mass-produced ocean liners, airplanes, and automobiles as the true models for modern design efficiency. The book lays the theoretical groundwork for the International Style and modern urban planning.
+
+Date : 1923
+
+Author : Le Corbusier (Charles-Édouard Jeanneret)
+
+Category : Architecture / Design Theory / Modernism
+
+Book id : ARCDES003
+
+Book shelf id : A130

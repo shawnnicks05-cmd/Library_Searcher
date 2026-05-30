@@ -1,0 +1,14 @@
+
+Book Title : Thinking in Bets: Making Smarter Decisions When You Don't Have All the Facts
+
+Description : Draws on professional poker insights to explain how to separate decision quality from decision outcomes, helping individuals navigate uncertainty, risk, and cognitive biases.
+
+Date : 2018
+
+Author : Annie Duke
+
+Category : Decision Analysis / Risk Management
+
+Book id :GEN-RES009
+
+Book Shelf id: G308

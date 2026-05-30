@@ -1,0 +1,13 @@
+Book Title : The Lean Startup
+
+Description : Proposes the "build-measure-learn" loop, advocating for rapid experimentation, Minimum Viable Products (MVPs), and validated learning cycles.
+
+Date : 2011
+
+Author : Eric Ries
+
+Category : Startup Methodology
+
+Book id : BE006
+
+Book Shelf id : E135
