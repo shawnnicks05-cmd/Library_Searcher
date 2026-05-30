@@ -1,0 +1,13 @@
+Book Title : Kumar and Clark's Clinical Medicine
+
+Description : A widely respected textbook emphasizing patient management, diagnostics, and therapeutics across clinical specialties.
+
+Date : 1987
+
+Author : Parveen Kumar & Michael L. Clark
+
+Category : Clinical Medicine
+
+Book id : MEDN010
+
+Book Shelf id : I359

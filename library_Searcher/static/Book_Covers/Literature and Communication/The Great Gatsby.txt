@@ -1,0 +1,13 @@
+Book Title : The Great Gatsby
+
+Description : The quintessential novel of the "Jazz Age," exploring the glamor, excess, and ultimate emptiness of the American Dream in the 1920s. The story is narrated by Nick Carraway, a young Midwesterner living on Long Island, who becomes entangled with his enigmatic, fabulously wealthy neighbor, Jay Gatsby. Gatsby throws lavish, chaotic parties every weekend for hundreds of guests, all in a desperate, obsessive bid to catch the attention of his lost love, Daisy Buchanan, who is married to the brutal aristocrat Tom Buchanan.
+
+Date : April 10, 1925
+
+Author : F. Scott Fitzgerald
+
+Category : Fiction / Literary Classic / Modernism
+
+Book id : LITCOM004
+
+Book Shelf id: H193

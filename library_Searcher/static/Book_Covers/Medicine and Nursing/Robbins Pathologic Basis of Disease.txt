@@ -1,0 +1,13 @@
+Book Title : Robbins Pathologic Basis of Disease
+
+Description : Widely considered the gold standard text in undergraduate and postgraduate medical pathology, this comprehensive textbook bridges the gap between basic cell biology and clinical medicine. It offers an exceptionally detailed, mechanism-driven exploration of human disease, analyzing how molecular, genetic, and cellular alterations manifest as structural and functional abnormalities in tissue. Through rigorous clinical-pathologic correlations, extensive histology illustrations, and up-to-date genomic insights, it provides healthcare professionals with a foundational understanding of underlying disease processes like inflammation, neoplasia, and organ system failures.
+
+Date : January 1, 1974
+
+Author : Vinay Kumar, Abul K. Abbas, Jon C. Aster
+
+Category : Pathology
+
+Book id : MEDN002
+
+Book Shelf id : I351

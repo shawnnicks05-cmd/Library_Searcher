@@ -1,0 +1,13 @@
+Book Title : On Liberty
+
+Description : Defends individual liberties and ethical autonomy against state overreach, outlining the iconic "harm principle" governing coercion boundaries.
+
+Date : 1859
+
+Author : John Stuart Mill
+
+Category : Classical Liberalism / Political Theory
+
+Book id : LAWPOLSCI006
+
+Book Shelf id: H185

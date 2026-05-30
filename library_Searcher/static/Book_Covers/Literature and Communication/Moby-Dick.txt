@@ -1,0 +1,13 @@
+Book Title : Moby-Dick
+
+Description : A monumental, deeply philosophical epic of obsession, fate, and the limits of human knowledge narrated by Ishmael, a sailor on the whaling ship Pequod. The voyage is single-mindedly hijacked by the monomaniacal Captain Ahab, whose leg was lost to a ferocious, legendary white whale named Moby Dick. Driven by absolute vengeance, Ahab forces his diverse crew into a perilous chase across the globe, transforming a commercial whaling expedition into a cosmic battle between human defiance and the overwhelming, indifferent forces of nature.
+
+Date : October 18, 1851
+
+Author : Herman Melville
+
+Category : Fiction / Adventure / American Renaissance
+
+Book id : LITCOM007
+
+Book Shelf id: H196

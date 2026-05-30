@@ -1,0 +1,13 @@
+Book Title : The Republic
+
+Description : One of the foundational intellectual texts of Western civilization. Structured as a Socratic dialogue, the book features Socrates debating various Athenian citizens and philosophers to define the nature of absolute justice. To understand justice within an individual, Socrates builds a hypothetical "ideal city-state" (Kallipolis), exploring education architectures, censorship, the abolition of private property among rulers, and governance by an elite intellectual class.
+
+Date : 375 BC
+
+Author : Plato
+
+Category : Philosophy / Political Theory / Classical Literature
+
+Book id : LAWPOLSCI001
+
+Book Shelf id: H180

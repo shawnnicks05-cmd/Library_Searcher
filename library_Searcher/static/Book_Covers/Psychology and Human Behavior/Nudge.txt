@@ -1,0 +1,14 @@
+Book Title : Nudge
+
+Description : Explores how small changes in choice architecture (how options are presented) can significantly influence human behavior and decision-making without restricting individual freedom.
+
+Date : 2008
+
+Author : Richard H. Thaler & Cass R. Sunstein
+
+Category : Behavioral Economics
+
+Book id : PSY005
+
+
+Book Shelf id : K504

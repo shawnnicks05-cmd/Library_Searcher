@@ -1,0 +1,14 @@
+Book Title : Leviathan
+
+Description : One of the most influential works of political philosophy ever written. Set against the backdrop of the English Civil War, it argues for the necessity of a strong, undivided central authority to avoid the chaos of civil war. It famously introduces the concept of the "state of nature"—a hypothetical world without government where human life is "solitary, poor, nasty, brutish, and short"—and outlines the foundational theory of the social contract.
+
+Date : April 1651
+
+Author : Thomas Hobbes
+
+Category : Political Philosophy / Constitutional Law
+
+Book id : LAWPOLSCI002 
+
+Book Shelf id: H181
+

@@ -1,0 +1,14 @@
+Book Title : The Social Animal
+
+Description : An investigation into human social interactions, mapping out how conforming, prejudice, attraction, and propaganda alter our behavior.
+
+Date : 1972
+
+Author : Elliot Aronson
+
+Category : Social Behavior
+
+Book id : PSY009
+
+
+Book Shelf id : K508

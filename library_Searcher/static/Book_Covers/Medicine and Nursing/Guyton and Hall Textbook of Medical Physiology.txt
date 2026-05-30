@@ -1,0 +1,13 @@
+Book Title : Guyton and Hall Textbook of Medical Physiology
+
+Description : The world's premier medical physiology textbook, revered for its clear, unified narrative voice that focuses on how the diverse organ systems of the human body interact to maintain homeostasis. Rather than merely listing biological facts, this text treats the body as a complex, self-regulating biological machine, detailing the physics, chemistry, and feedback loops governing cardiovascular mechanics, renal regulation, gastrointestinal digestion, and neuroendocrine signaling. It explicitly highlights how failures in these balancing loops lead directly to specific clinical pathophysiologies.
+
+Date : June 19, 2020
+
+Author : John E. Hall, Michael E. Hall
+
+Category : Medicine / Physiology
+
+Book id : MEDN003 
+
+Book Shelf id : I352

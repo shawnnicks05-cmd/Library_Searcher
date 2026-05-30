@@ -1,0 +1,14 @@
+Book Title : Constitutional Law (Seventh Edition)
+
+Description : Widely recognized as the premier treatise on the United States Constitution for law students, attorneys, and legal scholars. Chemerinsky breaks away from dry case law compilation to provide a highly analytical, narrative examination of constitutional doctrines. The text focuses heavily on the real-world policies, historical progressions, and ideological debates that drive Supreme Court decisions, offering clear explanations of conflicting legal tests and overlapping judicial philosophies.
+
+Date : 2024
+
+Author : Erwin Chemerinsky
+
+Category : Law / Constitutional Law / Jurisprudence
+
+Book id : LAWPOLSCI004
+
+Book Shelf id: H183
+

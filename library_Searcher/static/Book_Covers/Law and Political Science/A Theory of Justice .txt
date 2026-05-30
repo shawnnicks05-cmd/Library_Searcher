@@ -1,0 +1,13 @@
+Book Title : A Theory of Justice
+
+Description : Introduces the revolutionary thought-experiment of the "veil of ignorance," arguing for an egalitarian structural framework of social justice and equity.
+
+Date : 1971
+
+Author : John Rawls
+
+Category : Political Philosophy / Jurisprudence
+
+Book id : LAWPOLSCI005
+
+Book Shelf id: H184

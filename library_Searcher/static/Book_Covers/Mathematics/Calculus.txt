@@ -1,0 +1,13 @@
+Book Title : Calculus
+
+Description : Widely regarded as a gold standard in undergraduate mathematics education, this textbook focuses on establishing deep conceptual understanding alongside mechanical mastery. It balances precise mathematical proofs with clear engineering, physics, and economics applications. It is famous for its "Rule of Four," presenting mathematical concepts geometrically, numerically, analytically, and verbally.
+
+Date : 2016
+
+Author : James Stewart
+
+Category : Mathematics / Calculus
+
+Book id : MATH001
+
+Book Shelf id : J400

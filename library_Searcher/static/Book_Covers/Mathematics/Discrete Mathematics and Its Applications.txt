@@ -1,0 +1,13 @@
+Book Title : Discrete Mathematics and Its Applications
+
+Description : The definitive reference text for computer science and mathematical computer engineering curricula. It covers mathematical structures that are fundamentally discrete rather than continuous. It establishes foundational logic, proof methodologies, and combinatorial techniques essential for analyzing algorithm complexity, cryptography, database relational models, and network routing logic.
+
+Date : 2019
+
+Author : Kenneth H. Rosen
+
+Category : Mathematics / Computer Science
+
+Book id : MATH003
+
+Book Shelf id : J402

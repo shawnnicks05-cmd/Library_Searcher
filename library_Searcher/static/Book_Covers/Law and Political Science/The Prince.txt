@@ -1,0 +1,13 @@
+Book Title : The Prince
+
+Description : One of the most famous and controversial political treatises in Western history. Written as a practical manual for rulers rather than an idealistic vision of an ethical society, it rejects traditional Christian morality in statecraft. Machiavelli introduces a deeply pragmatic view of power politics, arguing that a ruler's primary duty is to maintain the stability of the state and secure power by any means necessary—giving rise to the term "Machiavellian."
+
+Date : 1532
+
+Author : Niccolò Machiavelli
+
+Category : Political Philosophy / Statecraft & Strategy
+
+Book id : LAWPOLSCI003
+
+Book Shelf id: H182

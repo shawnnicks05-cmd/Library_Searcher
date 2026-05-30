@@ -1,0 +1,14 @@
+Book Title : Influence: The Psychology of Persuasion
+
+Description : Influence: The Psychology of Persuasion is a 1984 nonfiction book by social psychologist Robert Cialdini. It explores the psychological mechanisms that underlie compliance and persuasion, providing a framework for understanding how people are influenced in everyday interactions. The book is widely regarded as a foundational text in marketing, sales, and behavioral psychology.
+
+Date : 1984 
+
+Author : Robert B. Cialdini
+
+Category : Social Psychology
+
+Book id : PSY004
+
+
+Book Shelf id : K503

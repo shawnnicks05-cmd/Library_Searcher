@@ -1,0 +1,13 @@
+Book Title : Numerical Analysis
+
+Description : Details mathematical approximation techniques, focusing on error bounds, root-finding routines, numerical calculus, differential equations, and linear system solving routines.
+
+Date : 1978
+
+Author : Richard L. Burden & J. Douglas Faires
+
+Category : Applied / Numerical Mathematics
+
+Book id : MATH010
+
+Book Shelf id : J409

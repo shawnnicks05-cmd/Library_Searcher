@@ -1,0 +1,13 @@
+Book Title : Jane Eyre
+
+Description : A bold, gothic-tinged bildungsroman that follows the emotional and moral growth of its titular orphaned heroine. Rising from a lonely and abusive childhood, Jane accepts a position as a governess at Thornfield Hall, where she falls passionately in love with her brooding, cynical employer, Edward Rochester. As their bond deepens, a dark and terrifying secret locked away in the estate's attic threatens to destroy their union, forcing Jane to choose between her intense passion and her fierce commitment to her own independence and moral integrity.
+
+Date : October 16, 1847
+
+Author : Charlotte Brontë
+
+Category : Fiction / Gothic Fiction / Victorian Literature
+
+Book id : LITCOM006
+
+Book Shelf id: H195

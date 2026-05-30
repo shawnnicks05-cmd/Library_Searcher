@@ -1,0 +1,13 @@
+Book Title :Oxford Handbook of Clinical Medicine (Eleventh Edition)
+
+Description : Fondly known as the "Cheese and Onion" handbook due to its traditional green and yellow cover, this pocket-sized reference guide is the gold standard for clinical rotations and junior doctors. It balances core medical facts with patient-centered advice, offering step-by-step diagnostic pathways, immediate management guidelines for emergencies, and witty, philosophical reflections on the art of practicing medicine.
+
+Date : June 6, 2024
+
+Author : Ian B. Wilkinson, Tim Raine, Kate Wiles, Peter Hateley, Dearbhla Kelly, Iain McGurgan
+
+Category : Internal Medicine / Clinical Reference
+
+Book id : MEDN004
+
+Book Shelf id : I353

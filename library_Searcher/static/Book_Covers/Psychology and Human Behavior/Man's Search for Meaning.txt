@@ -1,0 +1,15 @@
+Book Title :Man’s Search for Meaning
+
+Description : Man’s Search for Meaning is a 1946 book by Austrian psychiatrist Viktor Frankl. It blends memoir and psychological theory, describing Frankl’s experiences as a concentration camp prisoner during World War II and introducing his therapeutic framework of logotherapy. The book is regarded as one of the most influential works on resilience, purpose, and human psychology. 
+
+Date : November 1, 1946(German Edition)
+       June 1, 1959(English Edition)
+
+Author : Viktor E. Frankl
+
+Category : Psychology/ Human Behavior
+
+Book id : PSY002
+
+
+Book Shelf id : K501

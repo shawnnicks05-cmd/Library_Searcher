@@ -1,0 +1,11 @@
+Book Title : Crime and Punishment
+
+Description : A psychological thriller set in the stifling heat of St. Petersburg, tracking the mental torment and moral dilemma of Rodion Raskolnikov. An impoverished former student, Raskolnikov formulates a theory that certain extraordinary individuals are above the law. To prove this to himself, he brutally murders an unscrupulous old pawnbroker. The narrative delves deep into his subsequent paranoia, guilt, and isolating alienation from society as a brilliant investigator plays a cat-and-mouse game with his conscience, leading toward a painful but transformative path of redemption.
+
+Date : 1866
+
+Author : Fyodor Dostoevsky
+
+Category : Fiction / Psychological Realism / Philosophical Fiction
+
+Book id : LITCOM005

@@ -1,0 +1,14 @@
+Book Title : Understanding Analysis
+
+Description : A highly accessible, proof-oriented introduction to real analysis designed to build deep intuitive understanding of limits, continuity, series, and sequences.
+
+Date : 2001
+
+Author : Stephen Abbott
+
+Category : Real Analysis
+
+Book id : MATH006
+
+Book Shelf id : J405 
+

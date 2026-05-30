@@ -1,0 +1,14 @@
+Book Title : The Interpretation of Dreams
+
+Description : The Interpretation of Dreams (German: Die Traumdeutung) is a seminal 1899 book by Austrian neurologist and psychoanalyst Sigmund Freud. The work introduced Freud’s groundbreaking theory that dreams are a form of wish fulfillment revealing unconscious desires, laying the foundation for psychoanalytic thought.
+
+Date : November 4, 1899
+
+Author : Sigmund Freud
+
+Category : Psychology
+
+Book id : PSY003
+
+
+Book Shelf id : K502

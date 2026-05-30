@@ -1,0 +1,14 @@
+
+Book Title: Thinking, Fast and Slow
+
+Description: Thinking, Fast and Slow is a 2011 book by psychologist and Nobel laureate Daniel Kahneman. It summarizes decades of research in cognitive psychology and behavioral economics, explaining how two systems of thought—fast, intuitive thinking and slow, deliberate reasoning—shape human judgment and decision-making. 
+
+Date: October 25 2011
+
+Author : Daniel Kahneman
+
+Category : Psychology / Decision Making
+
+Book id : PSY001
+
+Book Shelf id : K500

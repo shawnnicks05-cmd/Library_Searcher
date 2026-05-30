@@ -1,0 +1,13 @@
+Book Title : The Odyssey
+
+Description : A cornerstone epic poem of Western literature detailing the epic ten-year journey of the Greek hero Odysseus as he struggles to return home to Ithaca after the fall of Troy. While his faithful wife, Penelope, fends off a swarm of aggressive suitors vying for his throne, Odysseus must rely on his legendary cunning, wit, and divine favor to survive terrifying encounters with monsters, witches, wrathful gods, and his own crew's folly, ultimately exploring themes of homecoming, loyalty, and identity.
+
+Date : c. 8th Century BCE
+
+Author : Homer
+
+Category : Fiction / Classical Epic Poetry / Mythology
+
+Book id : LITCOM009
+
+Book Shelf id: H198

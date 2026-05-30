@@ -1,0 +1,13 @@
+Book Title : War and Peace
+
+Description : A sprawling, panoramic masterpiece that intertwines the destinies of several aristocratic Russian families during the turbulent era of the Napoleonic Wars. Against a backdrop of grand historical events, including Napoleon’s invasion of Russia, the narrative shifts seamlessly between the brutal, chaotic realities of the battlefield and the intimate social dynamics of Moscow and St. Petersburg salons. Through characters like the searching Pierre Bezukhov and the vivacious Natasha Rostova, the epic captures the entire spectrum of human experience, examining free will, destiny, and the true meaning of life.
+
+Date : 1869
+
+Author : Leo Tolstoy
+
+Category : Fiction / Historical Fiction / Realism
+
+Book id : LITCOM010
+
+Book Shelf id: H199

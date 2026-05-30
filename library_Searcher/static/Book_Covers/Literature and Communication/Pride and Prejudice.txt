@@ -1,0 +1,13 @@
+Book Title : Pride and Prejudice
+
+Description : A classic romantic comedy of manners that satirizes the British landed gentry at the turn of the 19th century. The story revolves around the witty, sharp-tongued Elizabeth Bennet, one of five sisters whose mother is desperate to marry them off to wealthy suitors to secure their financial futures. When the wealthy, arrogant Mr. Darcy arrives in the neighborhood, his initial snub of Elizabeth sparks a fierce battle of wits, forcing both characters to overcome their personal flaws to find true love.
+
+Date : January 28, 1813
+
+Author : Jane Austen
+
+Category : Fiction / Romance / Satire of Manners
+
+Book id : LITCOM003
+
+Book Shelf id: H192

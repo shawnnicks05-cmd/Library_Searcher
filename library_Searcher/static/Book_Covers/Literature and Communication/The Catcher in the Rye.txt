@@ -1,0 +1,13 @@
+Book Title : The Catcher in the Rye
+
+Description : A defining novel of adolescent alienation and teenage angst narrated by Holden Caulfield, a cynical sixteen-year-old who has just been expelled from his elite prep school. Spanning three days in New York City, Holden wanders through a haze of loneliness, superficial encounters, and deep grief over his late brother, fiercely criticizing the "phoniness" of the adult world. His deep-seated desire is to protect the innocence of young children from the harsh realities of growing up, a struggle beautifully captured by his daydream of being a catcher in a field of rye.
+
+Date : July 16, 1951
+
+Author : J.D. Salinger
+
+Category : Fiction / Coming-of-Age / 20th Century Literature
+
+Book id : LITCOM008
+
+Book Shelf id: H197

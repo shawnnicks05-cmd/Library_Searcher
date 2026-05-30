@@ -1,0 +1,13 @@
+Book Title : Gray's Anatomy
+
+Description : An iconic, globally recognized masterwork of medical literature that serves as the definitive macro-anatomical reference for clinicians, surgeons, and medical students. The text provides an exhaustive, highly systematic breakdown of the human body, cataloging skeletal frameworks, muscular networks, neurovascular pathways, and visceral organ systems. Its clinical value lies in its granular structural detail, embryological developmental contexts, and precise surgical correlations, making it an indispensable cornerstone for diagnosing physical abnormalities and planning invasive medical procedures.
+
+Date : March 15, 2004
+
+Author : Richard L. Drake, A. Wayne Vogl, Adam W. M. Mitchell
+
+Category : Medicine
+
+Book id : MEDN001
+
+Book Shelf id : I350

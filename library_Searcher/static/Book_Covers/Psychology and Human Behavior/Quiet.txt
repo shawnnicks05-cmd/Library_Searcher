@@ -1,0 +1,15 @@
+Book Title : Quiet
+
+Description : Validates the strengths and traits of introverts, showing how modern society deeply undervalues them while favoring the extrovert ideal.
+
+Date : 2012
+
+Author : Susan Cain
+
+Category : Introversion & Personality Psychology
+
+Book id : PSY008
+
+
+Book Shelf id : K507
+

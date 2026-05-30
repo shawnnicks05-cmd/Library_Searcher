@@ -1,0 +1,13 @@
+Book Title : The Federalist Papers
+
+Description : A compilation of eighty-five essays written to defend and argue for the ratification of the United States Constitution, detailing its institutional balances.
+
+Date : 1788
+
+Author : Alexander Hamilton, James Madison, & John Jay
+
+Category : Constitutional Theory / Political Science
+
+Book id : LAWPOLSCI007
+
+Book Shelf id: H186

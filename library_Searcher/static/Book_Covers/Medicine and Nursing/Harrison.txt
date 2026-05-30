@@ -1,0 +1,13 @@
+Book Title : Harrison's Principles of Internal Medicine
+
+Description : The global standard text for internal medicine clinicians, delivering expansive pathophysiology, diagnostic methodologies, and clinical care plans.
+
+Date : 1950
+
+Author : Joseph Loscalzo, Anthony Fauci, Dennis Kasper, Stephen Hauser, J. Larry Jameson, & Dan Longo
+
+Category : Internal Medicine
+
+Book id : MEDN005
+
+Book Shelf id : I354

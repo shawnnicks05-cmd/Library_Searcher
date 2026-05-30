@@ -1,0 +1,13 @@
+Book Title :Advance Engineering Mathematics
+
+Description : A tailored bridge text specifically designed for engineering undergraduate tracks. It skips hyper-theoretical mathematical abstractions to focus on the pragmatic, computational tools required to model engineering workflows. It consolidates concepts from advanced algebra, calculus, and differential math to show how they apply to fluid dynamics, structural stress analysis, and electrical networks.
+
+Date : 2020
+
+Author : R.S. Lebelo, R.K. Mahlobo
+
+Category : Engineering / Applied Mathematics
+
+Book id : MATH004
+
+Book Shelf id : J403 

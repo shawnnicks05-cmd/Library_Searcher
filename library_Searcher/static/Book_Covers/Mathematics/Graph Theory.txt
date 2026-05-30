@@ -1,0 +1,13 @@
+Book Title : Graph Theory
+
+Description : A definitive, modern text covering the structural properties of graphs, connectivity, matching, coloring theorems, planarity, and infinite networks.
+
+Date : 1997
+
+Author : Reinhard Diestel
+
+Category : Discrete Mathematics / Graph Theory
+
+Book id : MATH009
+
+Book Shelf id : J408

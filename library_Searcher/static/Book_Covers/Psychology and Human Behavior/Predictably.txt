@@ -1,0 +1,15 @@
+Book Title : Predictably
+
+Description : Challenges the economic assumption that humans behave purely rationally, demonstrating systematic and predictable errors in our everyday choices.
+
+Date : 2008
+
+Author : Dan Ariely
+
+Category : Behavioral Psychology
+
+Book id : PSY006
+
+
+Book Shelf id : K505
+

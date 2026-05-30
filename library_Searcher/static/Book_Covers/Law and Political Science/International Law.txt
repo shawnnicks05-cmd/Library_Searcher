@@ -1,0 +1,13 @@
+Book Title : International Law
+
+Description : A definitive, comprehensive treatise analyzing the legal mechanics, treaties, customary protocols, state sovereignty rules, and human rights frameworks that govern global systems.
+
+Date : 1986
+
+Author : Malcolm N. Shaw
+
+Category : Public International Law
+
+Book id : LAWPOLSCI008
+
+Book Shelf id: H187

@@ -1,0 +1,13 @@
+Book Title : Bates' Guide to Physical Examination and History Taking
+
+Description : The essential framework for taking patient histories, conducting regional physical exams, and managing clinical reasoning.
+
+Date : 1974
+
+Author : Lynn S. Bickley & Peter G. Szilagyi
+
+Category : Physical Examination / Diagnostics
+
+Book id : MEDN006
+
+Book Shelf id : I355

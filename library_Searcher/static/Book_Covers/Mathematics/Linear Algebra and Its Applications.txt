@@ -1,0 +1,13 @@
+Book Title : Linear Algebra and Its Applications
+
+Description : An exceptionally lucid and pedagogical introduction to linear spaces. Rather than overwhelming students with abstract proofs from the outset, this text introduces concepts via concrete geometric interpretations and system-of-equations frameworks. It serves as an essential foundation for data science, computer graphics, engineering, and advanced algorithm design.
+
+Date : 2011
+
+Author : Gilbert Strang
+
+Category : Mathematics / Linear Algebra
+
+Book id : MATH002
+
+Book Shelf id : J401

@@ -1,0 +1,13 @@
+Book Title : Abstract Algebra
+
+Description : A gold-standard text providing an in-depth treatment of algebraic structures, offering comprehensive coverage of groups, rings, modules, vector spaces, fields, and Galois theory.
+
+Date : 1990
+
+Author : David S. Dummit & Richard M. Foote
+
+Category : Abstract Algebra
+
+Book id : MATH007
+
+Book Shelf id : J406

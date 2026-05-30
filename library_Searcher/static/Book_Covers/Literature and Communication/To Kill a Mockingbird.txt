@@ -1,0 +1,13 @@
+Book Title : To Kill a Mockingbird
+
+Description : A masterpiece of American literature set in the fictional town of Maycomb, Alabama, during the Great Depression. The story is told through the innocent eyes of young Scout Finch, whose father, Atticus Finch, is a principled lawyer appointed to defend Tom Robinson, a Black man falsely accused of raping a white woman. The novel brilliantly juxtaposes a childhood coming-of-age story with a harsh exploration of deep-rooted racial injustice, human cruelty, and the power of empathy.
+
+Date : July 11, 1960
+
+Author : Harper Lee
+
+Category : Fiction / Classic Literature / Historical Drama
+
+Book id : LITCOM001
+
+Book Shelf id: H190

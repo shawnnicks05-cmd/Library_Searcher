@@ -1,0 +1,14 @@
+Book Title : Nelson Textbook of Pediatrics
+
+Description : Comprehensive encyclopedia detailing pediatric health, congenital abnormalities, childhood developments, and treatment algorithms.
+
+Date : 1933
+
+Author : Robert M. Kliegman & Nathan J. Blum
+
+Category : Pediatrics
+
+Book id : MEDN007
+
+Book Shelf id : I356
+

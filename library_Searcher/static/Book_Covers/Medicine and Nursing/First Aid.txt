@@ -1,0 +1,13 @@
+Book Title : First Aid for the USMLE Step 1
+
+Description : An intensely structured review catalog summarizing the foundational sciences, organ-system pathologies, and high-yield study facts for licensing exams.
+
+Date : 1989
+
+Author : Tao Le & Vikas Bhushan
+
+Category : Board Review / USMLE Preparation
+
+Book id : MEDN008
+
+Book Shelf id : I357

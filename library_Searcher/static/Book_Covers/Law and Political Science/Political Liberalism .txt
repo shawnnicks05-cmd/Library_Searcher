@@ -1,0 +1,13 @@
+Book Title : Political Liberalism
+
+Description : Re-evaluates Rawlsian justice mechanics to see how stable, pluralistic societies can maintain democratic consensus despite conflicting moral or religious doctrines.
+
+Date : 1993
+
+Author : John Rawls
+
+Category : Political Philosophy
+
+Book id : LAWPOLSCI010
+
+Book Shelf id: H189

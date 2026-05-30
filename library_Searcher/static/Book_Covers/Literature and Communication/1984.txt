@@ -1,0 +1,13 @@
+Book Title : 1984
+
+Description : The definitive dystopian novel that introduced concepts like Big Brother, Thought Crime, Newspeak, and the Thought Police into the global lexicon. Set in a terrifyingly bureaucratic totalitarian state called Oceania, the story follows Winston Smith, a low-ranking member of the ruling Party who works at the Ministry of Truth, rewriting history to match the Party's changing propaganda. Trapped in a world of absolute surveillance, Winston attempts to rebel by keeping a secret journal and falling in love.
+
+Date : June 8, 1949
+
+Author : George Orwell
+
+Category : Dystopian Fiction / Political Satire / Sci-Fi Classic
+
+Book id : LITCOM002
+
+Book Shelf id: H191

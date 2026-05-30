@@ -1,0 +1,14 @@
+Book Title : Netter Atlas of Human Anatomy
+
+Description : A beautifully detailed medical atlas showcasing hand-painted illustrations of human structures, muscular pathways, and neurovascular patterns.
+
+Date : 1989
+
+Author : Frank H. Netter
+
+Category : Human Anatomy
+
+Book id : MEDN009
+
+Book Shelf id : I358
+

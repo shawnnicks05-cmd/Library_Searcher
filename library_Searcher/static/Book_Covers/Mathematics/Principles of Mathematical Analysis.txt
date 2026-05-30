@@ -1,0 +1,13 @@
+Book Title : Principles of Mathematical Analysis
+
+Description : Often referred to as "Baby Rudin," this rigorous text lays the pure mathematical foundations for metric spaces, sequences, continuity, differentiation, and Riemann-Stieltjes integration.
+
+Date : 1953
+
+Author : Walter Rudin
+
+Category : Real Analysis
+
+Book id : MATH005
+
+Book Shelf id : J404

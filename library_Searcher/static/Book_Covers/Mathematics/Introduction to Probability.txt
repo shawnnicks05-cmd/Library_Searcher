@@ -1,0 +1,13 @@
+Book Title : Introduction to Probability
+
+Description : Explores the fundamental concepts of probability theory, including random variables, conditioning, standard distributions, data indicators, and central limit theorems with engineering applications.
+
+Date : 2002
+
+Author : Dimitri P. Bertsekas & John N. Tsitsiklis
+
+Category : Probability Theory
+
+Book id : MATH008
+
+Book Shelf id : J407 
